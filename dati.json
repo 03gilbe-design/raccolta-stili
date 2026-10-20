@@ -1,0 +1,2236 @@
+[
+ {
+  "nome": "Zendaya",
+  "id": "zendaya",
+  "data": "01/09/1996",
+  "ora": "18:01",
+  "sole": "Vergine",
+  "venere": "Cancro",
+  "luna": "Toro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 159.84,
+   "Luna": 37.14,
+   "Mercurio": 183.26,
+   "Venere": 114.56,
+   "Marte": 115.08,
+   "Giove": 277.82,
+   "Saturno": 5.79,
+   "Urano": 301.21,
+   "Nettuno": 295.29,
+   "Plutone": 240.48
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Toro",
+   "Mercurio": "Bilancia",
+   "Venere": "Cancro",
+   "Marte": "Cancro",
+   "Giove": "Capricorno",
+   "Saturno": "Ariete",
+   "Urano": "Acquario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.95
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♅",
+    "forza": 0.34
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♆",
+    "forza": 0.93
+   },
+   {
+    "asp": "△",
+    "pianeta": "♇",
+    "forza": 0.26
+   }
+  ],
+  "foto": [
+   "foto/zendaya_0.jpg",
+   "foto/zendaya_1.jpg"
+  ]
+ },
+ {
+  "nome": "Keanu Reeves",
+  "id": "keanureeves",
+  "data": "02/09/1964",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Cancro",
+  "luna": "Cancro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 159.95,
+   "Luna": 110.1,
+   "Mercurio": 159.71,
+   "Venere": 114.16,
+   "Marte": 111.98,
+   "Giove": 55.88,
+   "Saturno": 331.02,
+   "Urano": 160.41,
+   "Nettuno": 225.43,
+   "Plutone": 163.84
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Cancro",
+   "Mercurio": "Vergine",
+   "Venere": "Cancro",
+   "Marte": "Cancro",
+   "Giove": "Toro",
+   "Saturno": "Pesci",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.76
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♃",
+    "forza": 0.64
+   }
+  ],
+  "foto": [
+   "foto/keanureeves_0.jpg",
+   "foto/keanureeves_1.jpg",
+   "foto/keanureeves_2.jpg"
+  ]
+ },
+ {
+  "nome": "Jack Black",
+  "id": "jackblack",
+  "data": "28/08/1969",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Cancro",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 155.04,
+   "Luna": 349.97,
+   "Mercurio": 181.5,
+   "Venere": 119.32,
+   "Marte": 256.61,
+   "Giove": 187.51,
+   "Saturno": 38.9,
+   "Urano": 182.56,
+   "Nettuno": 236.06,
+   "Plutone": 174.18
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Pesci",
+   "Mercurio": "Bilancia",
+   "Venere": "Cancro",
+   "Marte": "Sagittario",
+   "Giove": "Bilancia",
+   "Saturno": "Toro",
+   "Urano": "Bilancia",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.64
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.41
+   },
+   {
+    "asp": "△",
+    "pianeta": "♆",
+    "forza": 0.56
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♇",
+    "forza": 0.1
+   }
+  ],
+  "foto": [
+   "foto/jackblack_0.jpg"
+  ]
+ },
+ {
+  "nome": "Cameron Diaz",
+  "id": "camerondiaz",
+  "data": "30/08/1972",
+  "ora": "02:53",
+  "sole": "Vergine",
+  "venere": "Cancro",
+  "luna": "Toro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 157.11,
+   "Luna": 52.25,
+   "Mercurio": 139.97,
+   "Venere": 111.33,
+   "Marte": 159.77,
+   "Giove": 268.53,
+   "Saturno": 79.61,
+   "Urano": 196.18,
+   "Nettuno": 242.56,
+   "Plutone": 180.96
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Toro",
+   "Mercurio": "Leone",
+   "Venere": "Cancro",
+   "Marte": "Vergine",
+   "Giove": "Sagittario",
+   "Saturno": "Gemelli",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☽",
+    "forza": 0.85
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.36
+   }
+  ],
+  "foto": [
+   "foto/camerondiaz_0.jpg"
+  ]
+ },
+ {
+  "nome": "Salma Hayek",
+  "id": "salmahayek",
+  "data": "02/09/1966",
+  "ora": "06:40",
+  "sole": "Vergine",
+  "venere": "Leone",
+  "luna": "Ariete",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 159.59,
+   "Luna": 7.01,
+   "Mercurio": 152.12,
+   "Venere": 142.04,
+   "Marte": 125.03,
+   "Giove": 115.71,
+   "Saturno": 357.56,
+   "Urano": 169.35,
+   "Nettuno": 229.68,
+   "Plutone": 167.93
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Ariete",
+   "Mercurio": "Vergine",
+   "Venere": "Leone",
+   "Marte": "Leone",
+   "Giove": "Cancro",
+   "Saturno": "Pesci",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.71
+   }
+  ],
+  "foto": [
+   "foto/salmahayek_0.jpg",
+   "foto/salmahayek_1.jpg"
+  ]
+ },
+ {
+  "nome": "Kaia Gerber",
+  "id": "kaiagerber",
+  "data": "03/09/2001",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Leone",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 161.33,
+   "Luna": 351.04,
+   "Mercurio": 184.02,
+   "Venere": 129.09,
+   "Marte": 267.55,
+   "Giove": 100.4,
+   "Saturno": 74.48,
+   "Urano": 322.11,
+   "Nettuno": 306.49,
+   "Plutone": 252.57
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Pesci",
+   "Mercurio": "Bilancia",
+   "Venere": "Leone",
+   "Marte": "Sagittario",
+   "Giove": "Cancro",
+   "Saturno": "Gemelli",
+   "Urano": "Acquario",
+   "Nettuno": "Acquario",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.14
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♄",
+    "forza": 0.0
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♆",
+    "forza": 0.68
+   },
+   {
+    "asp": "△",
+    "pianeta": "♇",
+    "forza": 0.49
+   }
+  ],
+  "foto": [
+   "foto/kaiagerber_0.jpg",
+   "foto/kaiagerber_1.jpg",
+   "foto/kaiagerber_2.jpg"
+  ]
+ },
+ {
+  "nome": "Tom Hardy",
+  "id": "tomhardy",
+  "data": "15/09/1977",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Leone",
+  "luna": "Bilancia",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 172.49,
+   "Luna": 199.01,
+   "Mercurio": 157.0,
+   "Venere": 141.31,
+   "Marte": 98.7,
+   "Giove": 93.76,
+   "Saturno": 144.54,
+   "Urano": 219.23,
+   "Nettuno": 253.49,
+   "Plutone": 193.23
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Bilancia",
+   "Mercurio": "Vergine",
+   "Venere": "Leone",
+   "Marte": "Cancro",
+   "Giove": "Cancro",
+   "Saturno": "Leone",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♄",
+    "forza": 0.62
+   }
+  ],
+  "foto": [
+   "foto/tomhardy_0.jpg",
+   "foto/tomhardy_1.jpg",
+   "foto/tomhardy_2.jpg",
+   "foto/tomhardy_3.jpg",
+   "foto/tomhardy_4.jpg"
+  ]
+ },
+ {
+  "nome": "Blake Lively",
+  "id": "blakelively",
+  "data": "25/08/1987",
+  "ora": "05:07",
+  "sole": "Vergine",
+  "venere": "Vergine",
+  "luna": "Vergine",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 151.77,
+   "Luna": 162.94,
+   "Mercurio": 156.98,
+   "Venere": 152.38,
+   "Marte": 151.7,
+   "Giove": 29.68,
+   "Saturno": 254.56,
+   "Urano": 262.74,
+   "Nettuno": 275.37,
+   "Plutone": 217.56
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Vergine",
+   "Mercurio": "Vergine",
+   "Venere": "Vergine",
+   "Marte": "Vergine",
+   "Giove": "Ariete",
+   "Saturno": "Sagittario",
+   "Urano": "Sagittario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☉",
+    "forza": 0.94
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.54
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.93
+   },
+   {
+    "asp": "△",
+    "pianeta": "♃",
+    "forza": 0.66
+   },
+   {
+    "asp": "△",
+    "pianeta": "♆",
+    "forza": 0.63
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♇",
+    "forza": 0.14
+   }
+  ],
+  "foto": [
+   "foto/blakelively_0.jpg"
+  ]
+ },
+ {
+  "nome": "Matilda De Angelis",
+  "id": "matildadeangelis",
+  "data": "11/09/1995",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Vergine",
+  "luna": "Ariete",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 168.2,
+   "Luna": 16.43,
+   "Mercurio": 194.92,
+   "Venere": 174.05,
+   "Marte": 212.74,
+   "Giove": 247.84,
+   "Saturno": 351.59,
+   "Urano": 296.78,
+   "Nettuno": 292.93,
+   "Plutone": 238.13
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Ariete",
+   "Mercurio": "Bilancia",
+   "Venere": "Vergine",
+   "Marte": "Scorpione",
+   "Giove": "Sagittario",
+   "Saturno": "Pesci",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☉",
+    "forza": 0.4
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♄",
+    "forza": 0.69
+   },
+   {
+    "asp": "△",
+    "pianeta": "♅",
+    "forza": 0.58
+   },
+   {
+    "asp": "△",
+    "pianeta": "♆",
+    "forza": 0.78
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♇",
+    "forza": 0.22
+   }
+  ],
+  "foto": [
+   "foto/matildadeangelis_0.jpg"
+  ]
+ },
+ {
+  "nome": "Pink",
+  "id": "pink",
+  "data": "08/09/1979",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Vergine",
+  "luna": "Ariete",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 165.4,
+   "Luna": 16.5,
+   "Mercurio": 161.16,
+   "Venere": 169.26,
+   "Marte": 110.07,
+   "Giove": 145.74,
+   "Saturno": 167.01,
+   "Urano": 227.75,
+   "Nettuno": 257.75,
+   "Plutone": 197.83
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Ariete",
+   "Mercurio": "Vergine",
+   "Venere": "Vergine",
+   "Marte": "Cancro",
+   "Giove": "Leone",
+   "Saturno": "Vergine",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☉",
+    "forza": 0.6
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.16
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♂",
+    "forza": 0.81
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♄",
+    "forza": 0.72
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.65
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.73
+   }
+  ],
+  "foto": [
+   "foto/pink_0.jpg",
+   "foto/pink_1.jpg",
+   "foto/pink_2.jpg",
+   "foto/pink_3.jpg",
+   "foto/pink_4.jpg"
+  ]
+ },
+ {
+  "nome": "Beyoncé",
+  "id": "beyonc",
+  "data": "04/09/1981",
+  "ora": "21:47",
+  "sole": "Vergine",
+  "venere": "Bilancia",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 162.46,
+   "Luna": 236.73,
+   "Mercurio": 183.28,
+   "Venere": 200.8,
+   "Marte": 121.93,
+   "Giove": 192.49,
+   "Saturno": 189.11,
+   "Urano": 236.48,
+   "Nettuno": 262.09,
+   "Plutone": 202.67
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Scorpione",
+   "Mercurio": "Bilancia",
+   "Venere": "Bilancia",
+   "Marte": "Leone",
+   "Giove": "Bilancia",
+   "Saturno": "Bilancia",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♃",
+    "forza": 0.17
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♆",
+    "forza": 0.79
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.81
+   }
+  ],
+  "foto": [
+   "foto/beyonc_0.jpg",
+   "foto/beyonc_1.jpg",
+   "foto/beyonc_2.jpg",
+   "foto/beyonc_3.jpg",
+   "foto/beyonc_4.jpg"
+  ]
+ },
+ {
+  "nome": "Mahmood",
+  "id": "mahmood",
+  "data": "12/09/1992",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Bilancia",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 169.89,
+   "Luna": 353.44,
+   "Mercurio": 167.41,
+   "Venere": 194.41,
+   "Marte": 90.09,
+   "Giove": 173.95,
+   "Saturno": 312.73,
+   "Urano": 284.09,
+   "Nettuno": 286.24,
+   "Plutone": 230.68
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Pesci",
+   "Mercurio": "Vergine",
+   "Venere": "Bilancia",
+   "Marte": "Cancro",
+   "Giove": "Vergine",
+   "Saturno": "Acquario",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.71
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.88
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.69
+   }
+  ],
+  "foto": [
+   "foto/mahmood_0.jpg",
+   "foto/mahmood_1.jpg",
+   "foto/mahmood_2.jpg",
+   "foto/mahmood_3.jpg",
+   "foto/mahmood_4.jpg",
+   "foto/mahmood_5.jpg",
+   "foto/mahmood_6.jpg",
+   "foto/mahmood_7.jpg",
+   "foto/mahmood_8.jpg"
+  ]
+ },
+ {
+  "nome": "Belén Rodríguez",
+  "id": "belnrodrguez",
+  "data": "20/09/1984",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Bilancia",
+  "luna": "Cancro",
+  "luna_incerta": [
+   "Cancro",
+   "Leone"
+  ],
+  "pos": {
+   "Sole": 177.82,
+   "Luna": 115.45,
+   "Mercurio": 162.16,
+   "Venere": 203.82,
+   "Marte": 260.17,
+   "Giove": 273.86,
+   "Saturno": 223.31,
+   "Urano": 250.01,
+   "Nettuno": 268.69,
+   "Plutone": 210.73
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Cancro",
+   "Mercurio": "Vergine",
+   "Venere": "Bilancia",
+   "Marte": "Sagittario",
+   "Giove": "Capricorno",
+   "Saturno": "Scorpione",
+   "Urano": "Sagittario",
+   "Nettuno": "Sagittario",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♂",
+    "forza": 0.34
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♆",
+    "forza": 0.09
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.25
+   }
+  ],
+  "foto": [
+   "foto/belnrodrguez_0.jpg"
+  ]
+ },
+ {
+  "nome": "Nick Jonas",
+  "id": "nickjonas",
+  "data": "16/09/1992",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Bilancia",
+  "luna": "Toro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 174.07,
+   "Luna": 46.32,
+   "Mercurio": 175.42,
+   "Venere": 199.67,
+   "Marte": 92.51,
+   "Giove": 174.87,
+   "Saturno": 312.52,
+   "Urano": 284.06,
+   "Nettuno": 286.21,
+   "Plutone": 230.78
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Toro",
+   "Mercurio": "Vergine",
+   "Venere": "Bilancia",
+   "Marte": "Cancro",
+   "Giove": "Vergine",
+   "Saturno": "Acquario",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.03
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.22
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.49
+   }
+  ],
+  "foto": [
+   "foto/nickjonas_0.jpg"
+  ]
+ },
+ {
+  "nome": "Elisabetta Canalis",
+  "id": "elisabettacanalis",
+  "data": "12/09/1978",
+  "ora": "12:45",
+  "sole": "Vergine",
+  "venere": "Scorpione",
+  "luna": "Capricorno",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 169.32,
+   "Luna": 290.04,
+   "Mercurio": 154.13,
+   "Venere": 214.56,
+   "Marte": 205.05,
+   "Giove": 121.33,
+   "Saturno": 155.97,
+   "Urano": 223.49,
+   "Nettuno": 255.61,
+   "Plutone": 195.53
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Capricorno",
+   "Mercurio": "Vergine",
+   "Venere": "Scorpione",
+   "Marte": "Bilancia",
+   "Giove": "Leone",
+   "Saturno": "Vergine",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.93
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.05
+   },
+   {
+    "asp": "□",
+    "pianeta": "♃",
+    "forza": 0.6
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♄",
+    "forza": 0.76
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♅",
+    "forza": 0.11
+   }
+  ],
+  "foto": [
+   "foto/elisabettacanalis_0.jpg"
+  ]
+ },
+ {
+  "nome": "Alessandro Borghi",
+  "id": "alessandroborghi",
+  "data": "19/09/1986",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Scorpione",
+  "luna": "Ariete",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 176.17,
+   "Luna": 10.63,
+   "Mercurio": 187.35,
+   "Venere": 219.58,
+   "Marte": 290.37,
+   "Giove": 346.74,
+   "Saturno": 244.53,
+   "Urano": 258.57,
+   "Nettuno": 273.04,
+   "Plutone": 215.71
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Ariete",
+   "Mercurio": "Bilancia",
+   "Venere": "Scorpione",
+   "Marte": "Capricorno",
+   "Giove": "Pesci",
+   "Saturno": "Sagittario",
+   "Urano": "Sagittario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♃",
+    "forza": 0.05
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.58
+   }
+  ],
+  "foto": [
+   "foto/alessandroborghi_0.jpg"
+  ]
+ },
+ {
+  "nome": "RM (BTS)",
+  "id": "rmbts",
+  "data": "12/09/1994",
+  "ora": "13:28",
+  "sole": "Vergine",
+  "venere": "Scorpione",
+  "luna": "Sagittario",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 169.19,
+   "Luna": 255.34,
+   "Mercurio": 191.82,
+   "Venere": 213.64,
+   "Marte": 106.74,
+   "Giove": 221.61,
+   "Saturno": 338.22,
+   "Urano": 292.55,
+   "Nettuno": 290.69,
+   "Plutone": 235.67
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Sagittario",
+   "Mercurio": "Bilancia",
+   "Venere": "Scorpione",
+   "Marte": "Cancro",
+   "Giove": "Scorpione",
+   "Saturno": "Pesci",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♃",
+    "forza": 0.2
+   },
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.43
+   }
+  ],
+  "foto": [
+   "foto/rmbts_0.jpg"
+  ]
+ },
+ {
+  "nome": "Jennifer Lopez",
+  "id": "jenniferlopez",
+  "data": "24/07/1969",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Gemelli",
+  "luna": "Scorpione",
+  "luna_incerta": [
+   "Scorpione",
+   "Sagittario"
+  ],
+  "pos": {
+   "Sole": 121.56,
+   "Luna": 239.3,
+   "Mercurio": 123.93,
+   "Venere": 79.26,
+   "Marte": 243.5,
+   "Giove": 181.32,
+   "Saturno": 38.29,
+   "Urano": 180.83,
+   "Nettuno": 235.99,
+   "Plutone": 173.1
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Scorpione",
+   "Mercurio": "Leone",
+   "Venere": "Gemelli",
+   "Marte": "Sagittario",
+   "Giove": "Bilancia",
+   "Saturno": "Toro",
+   "Urano": "Bilancia",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "□",
+    "pianeta": "♇",
+    "forza": 0.45
+   }
+  ],
+  "foto": [
+   "foto/jenniferlopez_0.jpg",
+   "foto/jenniferlopez_1.jpg",
+   "foto/jenniferlopez_2.jpg",
+   "foto/jenniferlopez_3.jpg"
+  ]
+ },
+ {
+  "nome": "Halle Berry",
+  "id": "halleberry",
+  "data": "14/08/1966",
+  "ora": "23:59",
+  "sole": "Leone",
+  "venere": "Cancro",
+  "luna": "Leone",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 141.89,
+   "Luna": 123.19,
+   "Mercurio": 123.29,
+   "Venere": 119.55,
+   "Marte": 113.22,
+   "Giove": 112.03,
+   "Saturno": 358.72,
+   "Urano": 168.24,
+   "Nettuno": 229.46,
+   "Plutone": 167.3
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Leone",
+   "Mercurio": "Leone",
+   "Venere": "Cancro",
+   "Marte": "Cancro",
+   "Giove": "Cancro",
+   "Saturno": "Pesci",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☽",
+    "forza": 0.64
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.63
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.37
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♃",
+    "forza": 0.25
+   },
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.9
+   }
+  ],
+  "foto": [
+   "foto/halleberry_0.jpg",
+   "foto/halleberry_1.jpg",
+   "foto/halleberry_2.jpg",
+   "foto/halleberry_3.jpg"
+  ]
+ },
+ {
+  "nome": "Jannik Sinner",
+  "id": "janniksinner",
+  "data": "16/08/2001",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Cancro",
+  "luna": "Cancro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 143.6,
+   "Luna": 105.59,
+   "Mercurio": 154.12,
+   "Venere": 107.3,
+   "Marte": 259.99,
+   "Giove": 97.17,
+   "Saturno": 73.45,
+   "Urano": 322.83,
+   "Nettuno": 306.93,
+   "Plutone": 252.55
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Cancro",
+   "Mercurio": "Vergine",
+   "Venere": "Cancro",
+   "Marte": "Sagittario",
+   "Giove": "Cancro",
+   "Saturno": "Gemelli",
+   "Urano": "Acquario",
+   "Nettuno": "Acquario",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☽",
+    "forza": 0.16
+   }
+  ],
+  "foto": [
+   "foto/janniksinner_0.jpg",
+   "foto/janniksinner_1.jpg"
+  ]
+ },
+ {
+  "nome": "Shawn Mendes",
+  "id": "shawnmendes",
+  "data": "08/08/1998",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Cancro",
+  "luna": "Acquario",
+  "luna_incerta": [
+   "Acquario",
+   "Pesci"
+  ],
+  "pos": {
+   "Sole": 135.9,
+   "Luna": 323.46,
+   "Mercurio": 145.18,
+   "Venere": 114.24,
+   "Marte": 112.13,
+   "Giove": 357.31,
+   "Saturno": 33.58,
+   "Urano": 310.55,
+   "Nettuno": 300.35,
+   "Plutone": 245.31
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Acquario",
+   "Mercurio": "Leone",
+   "Venere": "Cancro",
+   "Marte": "Cancro",
+   "Giove": "Pesci",
+   "Saturno": "Toro",
+   "Urano": "Acquario",
+   "Nettuno": "Acquario",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.76
+   },
+   {
+    "asp": "△",
+    "pianeta": "♃",
+    "forza": 0.54
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♆",
+    "forza": 0.33
+   }
+  ],
+  "foto": [
+   "foto/shawnmendes_0.jpg",
+   "foto/shawnmendes_1.jpg",
+   "foto/shawnmendes_2.jpg",
+   "foto/shawnmendes_3.jpg"
+  ]
+ },
+ {
+  "nome": "Jennifer Lawrence",
+  "id": "jenniferlawrence",
+  "data": "15/08/1990",
+  "ora": "15:20",
+  "sole": "Leone",
+  "venere": "Leone",
+  "luna": "Gemelli",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 142.7,
+   "Luna": 81.18,
+   "Mercurio": 169.63,
+   "Venere": 122.3,
+   "Marte": 51.56,
+   "Giove": 119.46,
+   "Saturno": 289.84,
+   "Urano": 275.96,
+   "Nettuno": 282.19,
+   "Plutone": 225.09
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Gemelli",
+   "Mercurio": "Vergine",
+   "Venere": "Leone",
+   "Marte": "Toro",
+   "Giove": "Cancro",
+   "Saturno": "Capricorno",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♃",
+    "forza": 0.72
+   }
+  ],
+  "foto": [
+   "foto/jenniferlawrence_0.jpg",
+   "foto/jenniferlawrence_1.jpg",
+   "foto/jenniferlawrence_2.jpg"
+  ]
+ },
+ {
+  "nome": "Jason Momoa",
+  "id": "jasonmomoa",
+  "data": "01/08/1979",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Leone",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 129.05,
+   "Luna": 226.9,
+   "Mercurio": 127.04,
+   "Venere": 122.56,
+   "Marte": 85.55,
+   "Giove": 137.52,
+   "Saturno": 162.46,
+   "Urano": 226.94,
+   "Nettuno": 257.94,
+   "Plutone": 196.78
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Scorpione",
+   "Mercurio": "Leone",
+   "Venere": "Leone",
+   "Marte": "Gemelli",
+   "Giove": "Leone",
+   "Saturno": "Vergine",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☉",
+    "forza": 0.34
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.45
+   }
+  ],
+  "foto": [
+   "foto/jasonmomoa_0.jpg",
+   "foto/jasonmomoa_1.jpg",
+   "foto/jasonmomoa_2.jpg",
+   "foto/jasonmomoa_3.jpg",
+   "foto/jasonmomoa_4.jpg",
+   "foto/jasonmomoa_5.jpg"
+  ]
+ },
+ {
+  "nome": "Daniel Radcliffe",
+  "id": "danielradcliffe",
+  "data": "23/07/1989",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Leone",
+  "luna": "Ariete",
+  "luna_incerta": [
+   "Pesci",
+   "Ariete"
+  ],
+  "pos": {
+   "Sole": 120.57,
+   "Luna": 2.57,
+   "Mercurio": 126.39,
+   "Venere": 149.27,
+   "Marte": 143.01,
+   "Giove": 88.43,
+   "Saturno": 279.13,
+   "Urano": 272.25,
+   "Nettuno": 280.46,
+   "Plutone": 222.37
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Ariete",
+   "Mercurio": "Leone",
+   "Venere": "Leone",
+   "Marte": "Leone",
+   "Giove": "Gemelli",
+   "Saturno": "Capricorno",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.35
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♃",
+    "forza": 0.78
+   },
+   {
+    "asp": "△",
+    "pianeta": "♅",
+    "forza": 0.55
+   }
+  ],
+  "foto": [
+   "foto/danielradcliffe_0.jpg",
+   "foto/danielradcliffe_1.jpg",
+   "foto/danielradcliffe_2.jpg",
+   "foto/danielradcliffe_3.jpg",
+   "foto/danielradcliffe_4.jpg",
+   "foto/danielradcliffe_5.jpg",
+   "foto/danielradcliffe_6.jpg"
+  ]
+ },
+ {
+  "nome": "Kylie Jenner",
+  "id": "kyliejenner",
+  "data": "10/08/1997",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Vergine",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 138.17,
+   "Luna": 219.73,
+   "Mercurio": 164.15,
+   "Venere": 171.88,
+   "Marte": 207.82,
+   "Giove": 316.84,
+   "Saturno": 20.29,
+   "Urano": 306.22,
+   "Nettuno": 298.03,
+   "Plutone": 242.83
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Scorpione",
+   "Mercurio": "Vergine",
+   "Venere": "Vergine",
+   "Marte": "Bilancia",
+   "Giove": "Acquario",
+   "Saturno": "Ariete",
+   "Urano": "Acquario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.19
+   },
+   {
+    "asp": "△",
+    "pianeta": "♆",
+    "forza": 0.16
+   }
+  ],
+  "foto": [
+   "foto/kyliejenner_0.jpg",
+   "foto/kyliejenner_1.jpg",
+   "foto/kyliejenner_2.jpg",
+   "foto/kyliejenner_3.jpg",
+   "foto/kyliejenner_4.jpg"
+  ]
+ },
+ {
+  "nome": "Chris Hemsworth",
+  "id": "chrishemsworth",
+  "data": "11/08/1983",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Vergine",
+  "luna": "Vergine",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 137.86,
+   "Luna": 170.24,
+   "Mercurio": 163.8,
+   "Venere": 158.47,
+   "Marte": 118.3,
+   "Giove": 241.32,
+   "Saturno": 209.04,
+   "Urano": 245.07,
+   "Nettuno": 266.67,
+   "Plutone": 207.05
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Vergine",
+   "Mercurio": "Vergine",
+   "Venere": "Vergine",
+   "Marte": "Cancro",
+   "Giove": "Sagittario",
+   "Saturno": "Bilancia",
+   "Urano": "Sagittario",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.39
+   },
+   {
+    "asp": "□",
+    "pianeta": "♃",
+    "forza": 0.09
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.56
+   }
+  ],
+  "foto": [
+   "foto/chrishemsworth_0.jpg",
+   "foto/chrishemsworth_1.jpg",
+   "foto/chrishemsworth_2.jpg",
+   "foto/chrishemsworth_3.jpg"
+  ]
+ },
+ {
+  "nome": "Cara Delevingne",
+  "id": "caradelevingne",
+  "data": "12/08/1992",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Vergine",
+  "luna": "Acquario",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 139.98,
+   "Luna": 309.34,
+   "Mercurio": 125.99,
+   "Venere": 156.38,
+   "Marte": 71.11,
+   "Giove": 167.41,
+   "Saturno": 314.76,
+   "Urano": 284.72,
+   "Nettuno": 286.72,
+   "Plutone": 230.19
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Acquario",
+   "Mercurio": "Leone",
+   "Venere": "Vergine",
+   "Marte": "Gemelli",
+   "Giove": "Vergine",
+   "Saturno": "Acquario",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "□",
+    "pianeta": "♂",
+    "forza": 0.37
+   }
+  ],
+  "foto": [
+   "foto/caradelevingne_0.jpg",
+   "foto/caradelevingne_1.jpg",
+   "foto/caradelevingne_2.jpg",
+   "foto/caradelevingne_3.jpg",
+   "foto/caradelevingne_4.jpg",
+   "foto/caradelevingne_5.jpg",
+   "foto/caradelevingne_6.jpg",
+   "foto/caradelevingne_7.jpg"
+  ]
+ },
+ {
+  "nome": "Charlize Theron",
+  "id": "charlizetheron",
+  "data": "07/08/1975",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Vergine",
+  "luna": "Leone",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 134.29,
+   "Luna": 133.15,
+   "Mercurio": 140.76,
+   "Venere": 161.69,
+   "Marte": 55.32,
+   "Giove": 24.61,
+   "Saturno": 115.43,
+   "Urano": 208.78,
+   "Nettuno": 249.08,
+   "Plutone": 187.18
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Leone",
+   "Mercurio": "Leone",
+   "Venere": "Vergine",
+   "Marte": "Toro",
+   "Giove": "Ariete",
+   "Saturno": "Cancro",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.67
+   }
+  ],
+  "foto": [
+   "foto/charlizetheron_0.jpg"
+  ]
+ },
+ {
+  "nome": "Malcolm-Jamal Warner",
+  "id": "malcolmjamalwarner",
+  "data": "18/08/1970",
+  "ora": "02:43",
+  "sole": "Leone",
+  "venere": "Bilancia",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 144.91,
+   "Luna": 341.19,
+   "Mercurio": 172.2,
+   "Venere": 190.46,
+   "Marte": 139.86,
+   "Giove": 210.35,
+   "Saturno": 52.36,
+   "Urano": 186.5,
+   "Nettuno": 238.14,
+   "Plutone": 176.03
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Pesci",
+   "Mercurio": "Vergine",
+   "Venere": "Bilancia",
+   "Marte": "Leone",
+   "Giove": "Scorpione",
+   "Saturno": "Toro",
+   "Urano": "Bilancia",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♅",
+    "forza": 0.6
+   }
+  ],
+  "foto": [
+   "foto/malcolmjamalwarner_0.jpg"
+  ]
+ },
+ {
+  "nome": "Monica Bellucci",
+  "id": "monicabellucci",
+  "data": "30/09/1964",
+  "ora": "14:30",
+  "sole": "Bilancia",
+  "venere": "Leone",
+  "luna": "Leone",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 187.41,
+   "Luna": 122.7,
+   "Mercurio": 175.66,
+   "Venere": 144.12,
+   "Marte": 129.33,
+   "Giove": 55.71,
+   "Saturno": 329.2,
+   "Urano": 162.14,
+   "Nettuno": 226.14,
+   "Plutone": 164.82
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Leone",
+   "Mercurio": "Vergine",
+   "Venere": "Leone",
+   "Marte": "Leone",
+   "Giove": "Toro",
+   "Saturno": "Acquario",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "□",
+    "pianeta": "♃",
+    "forza": 0.8
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♄",
+    "forza": 0.49
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.0
+   }
+  ],
+  "foto": [
+   "foto/monicabellucci_0.jpg",
+   "foto/monicabellucci_1.jpg",
+   "foto/monicabellucci_2.jpg",
+   "foto/monicabellucci_3.jpg",
+   "foto/monicabellucci_4.jpg"
+  ]
+ },
+ {
+  "nome": "Gwyneth Paltrow",
+  "id": "gwynethpaltrow",
+  "data": "27/09/1972",
+  "ora": "17:25",
+  "sole": "Bilancia",
+  "venere": "Leone",
+  "luna": "Gemelli",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 184.98,
+   "Luna": 71.57,
+   "Mercurio": 191.42,
+   "Venere": 141.68,
+   "Marte": 178.09,
+   "Giove": 270.22,
+   "Saturno": 80.58,
+   "Urano": 197.83,
+   "Nettuno": 243.02,
+   "Plutone": 182.02
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Gemelli",
+   "Mercurio": "Bilancia",
+   "Venere": "Leone",
+   "Marte": "Vergine",
+   "Giove": "Capricorno",
+   "Saturno": "Gemelli",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♄",
+    "forza": 0.82
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.36
+   }
+  ],
+  "foto": [
+   "foto/gwynethpaltrow_0.jpg",
+   "foto/gwynethpaltrow_1.jpg",
+   "foto/gwynethpaltrow_2.jpg",
+   "foto/gwynethpaltrow_3.jpg",
+   "foto/gwynethpaltrow_4.jpg",
+   "foto/gwynethpaltrow_5.jpg"
+  ]
+ },
+ {
+  "nome": "Bella Hadid",
+  "id": "bellahadid",
+  "data": "09/10/1996",
+  "ora": "04:19",
+  "sole": "Bilancia",
+  "venere": "Vergine",
+  "luna": "Vergine",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 196.44,
+   "Luna": 160.78,
+   "Mercurio": 180.51,
+   "Venere": 156.2,
+   "Marte": 138.06,
+   "Giove": 279.8,
+   "Saturno": 2.99,
+   "Urano": 300.64,
+   "Nettuno": 294.98,
+   "Plutone": 241.3
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Vergine",
+   "Mercurio": "Bilancia",
+   "Venere": "Vergine",
+   "Marte": "Leone",
+   "Giove": "Capricorno",
+   "Saturno": "Ariete",
+   "Urano": "Acquario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Sagittario"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☽",
+    "forza": 0.54
+   },
+   {
+    "asp": "△",
+    "pianeta": "♃",
+    "forza": 0.55
+   },
+   {
+    "asp": "□",
+    "pianeta": "♇",
+    "forza": 0.39
+   }
+  ],
+  "foto": [
+   "foto/bellahadid_0.jpg",
+   "foto/bellahadid_1.jpg",
+   "foto/bellahadid_2.jpg",
+   "foto/bellahadid_3.jpg",
+   "foto/bellahadid_4.jpg"
+  ]
+ },
+ {
+  "nome": "Kim Kardashian",
+  "id": "kimkardashian",
+  "data": "21/10/1980",
+  "ora": "10:46",
+  "sole": "Bilancia",
+  "venere": "Vergine",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 208.49,
+   "Luna": 358.16,
+   "Mercurio": 229.81,
+   "Venere": 169.6,
+   "Marte": 246.8,
+   "Giove": 178.87,
+   "Saturno": 183.69,
+   "Urano": 234.21,
+   "Nettuno": 260.59,
+   "Plutone": 201.97
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Pesci",
+   "Mercurio": "Scorpione",
+   "Venere": "Vergine",
+   "Marte": "Sagittario",
+   "Giove": "Vergine",
+   "Saturno": "Bilancia",
+   "Urano": "Scorpione",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☍",
+    "pianeta": "☽",
+    "forza": 0.14
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.97
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♃",
+    "forza": 0.07
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.23
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.88
+   }
+  ],
+  "foto": [
+   "foto/kimkardashian_0.jpg",
+   "foto/kimkardashian_1.jpg",
+   "foto/kimkardashian_2.jpg",
+   "foto/kimkardashian_3.jpg",
+   "foto/kimkardashian_4.jpg",
+   "foto/kimkardashian_5.jpg",
+   "foto/kimkardashian_6.jpg",
+   "foto/kimkardashian_7.jpg"
+  ]
+ },
+ {
+  "nome": "Gwen Stefani",
+  "id": "gwenstefani",
+  "data": "03/10/1969",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Vergine",
+  "luna": "Cancro",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 190.39,
+   "Luna": 103.98,
+   "Mercurio": 181.71,
+   "Venere": 162.99,
+   "Marte": 277.95,
+   "Giove": 195.09,
+   "Saturno": 37.38,
+   "Urano": 184.79,
+   "Nettuno": 236.79,
+   "Plutone": 175.51
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Cancro",
+   "Mercurio": "Bilancia",
+   "Venere": "Vergine",
+   "Marte": "Capricorno",
+   "Giove": "Bilancia",
+   "Saturno": "Toro",
+   "Urano": "Bilancia",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♂",
+    "forza": 0.33
+   },
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.22
+   }
+  ],
+  "foto": [
+   "foto/gwenstefani_0.jpg",
+   "foto/gwenstefani_1.jpg",
+   "foto/gwenstefani_2.jpg",
+   "foto/gwenstefani_3.jpg",
+   "foto/gwenstefani_4.jpg",
+   "foto/gwenstefani_5.jpg",
+   "foto/gwenstefani_6.jpg",
+   "foto/gwenstefani_7.jpg"
+  ]
+ },
+ {
+  "nome": "Will Smith",
+  "id": "willsmith",
+  "data": "25/09/1968",
+  "ora": "21:47",
+  "sole": "Bilancia",
+  "venere": "Bilancia",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 183.04,
+   "Luna": 231.14,
+   "Mercurio": 208.52,
+   "Venere": 209.23,
+   "Marte": 152.7,
+   "Giove": 170.07,
+   "Saturno": 23.57,
+   "Urano": 179.84,
+   "Nettuno": 234.46,
+   "Plutone": 173.06
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Scorpione",
+   "Mercurio": "Bilancia",
+   "Venere": "Bilancia",
+   "Marte": "Vergine",
+   "Giove": "Vergine",
+   "Saturno": "Ariete",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.93
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♂",
+    "forza": 0.42
+   },
+   {
+    "asp": "☍",
+    "pianeta": "♄",
+    "forza": 0.43
+   }
+  ],
+  "foto": [
+   "foto/willsmith_0.jpg",
+   "foto/willsmith_1.jpg",
+   "foto/willsmith_2.jpg",
+   "foto/willsmith_3.jpg",
+   "foto/willsmith_4.jpg"
+  ]
+ },
+ {
+  "nome": "Zac Efron",
+  "id": "zacefron",
+  "data": "18/10/1987",
+  "ora": "13:22",
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Vergine",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 204.92,
+   "Luna": 159.7,
+   "Mercurio": 222.91,
+   "Venere": 219.94,
+   "Marte": 186.46,
+   "Giove": 24.64,
+   "Saturno": 257.33,
+   "Urano": 263.65,
+   "Nettuno": 275.5,
+   "Plutone": 219.3
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Vergine",
+   "Mercurio": "Scorpione",
+   "Venere": "Scorpione",
+   "Marte": "Bilancia",
+   "Giove": "Ariete",
+   "Saturno": "Sagittario",
+   "Urano": "Sagittario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☽",
+    "forza": 0.96
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.7
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♆",
+    "forza": 0.26
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.94
+   }
+  ],
+  "foto": [
+   "foto/zacefron_0.jpg"
+  ]
+ },
+ {
+  "nome": "Cardi B",
+  "id": "cardib",
+  "data": "11/10/1992",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Ariete",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 198.59,
+   "Luna": 17.61,
+   "Mercurio": 216.33,
+   "Venere": 230.17,
+   "Marte": 105.14,
+   "Giove": 180.23,
+   "Saturno": 311.84,
+   "Urano": 284.19,
+   "Nettuno": 286.23,
+   "Plutone": 231.55
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Ariete",
+   "Mercurio": "Scorpione",
+   "Venere": "Scorpione",
+   "Marte": "Cancro",
+   "Giove": "Bilancia",
+   "Saturno": "Acquario",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♂",
+    "forza": 0.32
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♆",
+    "forza": 0.24
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.8
+   }
+  ],
+  "foto": [
+   "foto/cardib_0.jpg"
+  ]
+ },
+ {
+  "nome": "Hugh Jackman",
+  "id": "hughjackman",
+  "data": "12/10/1968",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Gemelli",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 198.81,
+   "Luna": 80.91,
+   "Mercurio": 206.54,
+   "Venere": 228.84,
+   "Marte": 162.68,
+   "Giove": 173.43,
+   "Saturno": 22.35,
+   "Urano": 180.83,
+   "Nettuno": 234.93,
+   "Plutone": 173.62
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Gemelli",
+   "Mercurio": "Bilancia",
+   "Venere": "Scorpione",
+   "Marte": "Vergine",
+   "Giove": "Vergine",
+   "Saturno": "Ariete",
+   "Urano": "Bilancia",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♃",
+    "forza": 0.15
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♆",
+    "forza": 0.33
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♇",
+    "forza": 0.1
+   }
+  ],
+  "foto": [
+   "foto/hughjackman_0.jpg"
+  ]
+ },
+ {
+  "nome": "Fedez",
+  "id": "fedez",
+  "data": "15/10/1989",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Sagittario",
+  "luna": "Toro",
+  "luna_incerta": [
+   "Ariete",
+   "Toro"
+  ],
+  "pos": {
+   "Sole": 202.07,
+   "Luna": 30.72,
+   "Mercurio": 185.37,
+   "Venere": 247.57,
+   "Marte": 196.87,
+   "Giove": 100.57,
+   "Saturno": 278.24,
+   "Urano": 271.87,
+   "Nettuno": 279.77,
+   "Plutone": 224.2
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Toro",
+   "Mercurio": "Bilancia",
+   "Venere": "Sagittario",
+   "Marte": "Bilancia",
+   "Giove": "Cancro",
+   "Saturno": "Capricorno",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.61
+   }
+  ],
+  "foto": [
+   "foto/fedez_0.jpg"
+  ]
+ },
+ {
+  "nome": "Valeria Golino",
+  "id": "valeriagolino",
+  "data": "22/10/1965",
+  "ora": "08:45",
+  "sole": "Bilancia",
+  "venere": "Sagittario",
+  "luna": "Vergine",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 208.7,
+   "Luna": 179.05,
+   "Mercurio": 224.47,
+   "Venere": 254.22,
+   "Marte": 252.94,
+   "Giove": 91.31,
+   "Saturno": 340.93,
+   "Urano": 167.84,
+   "Nettuno": 228.96,
+   "Plutone": 167.55
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Vergine",
+   "Mercurio": "Scorpione",
+   "Venere": "Sagittario",
+   "Marte": "Sagittario",
+   "Giove": "Cancro",
+   "Saturno": "Pesci",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "♂",
+    "forza": 0.87
+   },
+   {
+    "asp": "□",
+    "pianeta": "♄",
+    "forza": 0.59
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.55
+   },
+   {
+    "asp": "□",
+    "pianeta": "♇",
+    "forza": 0.58
+   }
+  ],
+  "foto": [
+   "foto/valeriagolino_0.jpg"
+  ]
+ }
+]

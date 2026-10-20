@@ -1,0 +1,179 @@
+<meta charset="utf-8">
+<meta property="og:title" content="Venere e i vestiti"><meta property="og:description" content="Personaggi famosi per Sole e Venere: confronta i look, dividi per Luna, apri il tema natale."><meta property="og:image" content="https://03gilbe-design.github.io/venere-vestiti/anteprima.jpg"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Venere e vestiti</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: rivista di moda — filtri in testa, gruppi per pianeta come "servizi", schede-ritratto con nastro di foto */
+:root{
+  --bg:#f5f4f7; --carta:#ffffff; --ink:#1c1b2e; --muto:#6b6880; --linea:#dcdae4;
+  --accento:#a3195b; --accento-tenue:#f6e3ec;
+  --display:"Bodoni Moda", "Didot", Georgia, serif;
+  --testo:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sole:#a86b00; --luna:#4d5b6b; --mercurio:#b34a12; --venere:#a3195b; --marte:#c0262d;
+  --giove:#6b3fa8; --saturno:#6b4a2e; --urano:#00808a; --nettuno:#1f4fc2; --plutone:#9b1c5a;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13121c; --carta:#1c1a28; --ink:#ecebf3; --muto:#a3a0b8; --linea:#34314a;
+  --accento:#f06aa8; --accento-tenue:#3a1d2c;
+  --sole:#e0a83a; --luna:#aab6c4; --mercurio:#f08a4b; --venere:#f06aa8; --marte:#ff6b6b;
+  --giove:#b48cf0; --saturno:#c9a27a; --urano:#3ec6cf; --nettuno:#7ea3ff; --plutone:#e05a9c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13121c; --carta:#1c1a28; --ink:#ecebf3; --muto:#a3a0b8; --linea:#34314a;
+  --accento:#f06aa8; --accento-tenue:#3a1d2c;
+  --sole:#e0a83a; --luna:#aab6c4; --mercurio:#f08a4b; --venere:#f06aa8; --marte:#ff6b6b;
+  --giove:#b48cf0; --saturno:#c9a27a; --urano:#3ec6cf; --nettuno:#7ea3ff; --plutone:#e05a9c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--testo);font-size:15px;line-height:1.5}
+.pagina{max-width:1280px;margin:0 auto;padding-block:28px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,64px);line-height:1;margin:0;letter-spacing:-.01em;text-wrap:balance}
+header h1 em{font-style:italic;font-weight:500;color:var(--accento)}
+header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
+.filtri{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;margin:26px 0 8px;padding:16px 0;border-block:1px solid var(--linea)}
+.filtri label{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
+.filtri select{font:500 15px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:6px;padding:8px 30px 8px 10px;min-width:150px}
+.filtri select:focus-visible,button:focus-visible,.scheda:focus-visible{outline:2px solid var(--accento);outline-offset:2px}
+.conteggio{margin-left:auto;color:var(--muto);font-variant-numeric:tabular-nums}
+.gruppo{margin-top:34px}
+.gruppo h2{font-family:var(--display);font-weight:500;font-style:italic;font-size:30px;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
+.gruppo h2 .glifo{font-style:normal;color:var(--accento)}
+.gruppo h2 small{font:500 12px var(--testo);letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
+.schede{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.scheda{background:var(--carta);border:1px solid var(--linea);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;min-width:0;text-align:left;padding:0;color:inherit;font:inherit}
+.scheda:hover{border-color:var(--accento)}
+.nastro{display:flex;gap:4px;overflow-x:auto;background:var(--bg);padding:6px;scroll-snap-type:x mandatory}
+.nastro img{height:230px;width:auto;border-radius:4px;scroll-snap-align:start;flex:none;object-fit:cover}
+.corpo{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px}
+.corpo h3{font-family:var(--display);font-weight:700;font-size:21px;margin:0;line-height:1.15}
+.posizioni{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;border:1px solid var(--linea);border-radius:99px;padding:2px 9px;white-space:nowrap}
+.chip b{font-weight:600}
+.chip.incerta{border-style:dashed}
+.tocchi{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--muto)}
+.g{font-family:"Segoe UI Symbol","Noto Sans Symbols 2","Apple Symbols",var(--testo);font-size:18px;line-height:1}
+dialog{border:none;border-radius:14px;padding:0;max-width:min(980px,96vw);width:100%;background:var(--carta);color:var(--ink)}
+dialog::backdrop{background:rgba(10,8,20,.6)}
+.dett{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:22px;padding:22px}
+@media (max-width:760px){.dett{grid-template-columns:1fr}}
+.dett h2{font-family:var(--display);font-size:34px;margin:0}
+.dett .meta{color:var(--muto);font-size:13px}
+.ruota{width:100%;max-width:380px;aspect-ratio:1}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+td{padding:4px 6px;border-bottom:1px solid var(--linea)}
+.galleria{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+.galleria img{height:300px;width:auto;border-radius:6px;flex:none}
+.chiudi{position:sticky;top:0;float:right;margin:10px;border:1px solid var(--linea);background:var(--carta);color:var(--ink);border-radius:99px;padding:6px 14px;font:500 14px var(--testo);cursor:pointer}
+.nota{font-size:12px;color:var(--muto)}
+.vuoto{color:var(--muto);padding:40px 0}
+@media (prefers-reduced-motion:no-preference){.scheda{transition:border-color .15s}}
+</style>
+
+<div class="pagina">
+  <header>
+    <h1>Venere <em>e i vestiti</em></h1>
+    <p>Personaggi famosi per segno solare e Venere. Scegli un gruppo, dividilo per un altro pianeta e confronta come si vestono. Tocca un personaggio per il tema natale.</p>
+  </header>
+
+  <form class="filtri" id="filtri">
+    <label for="f-sole">Sole<select id="f-sole"></select></label>
+    <label for="f-venere">Venere<select id="f-venere"></select></label>
+    <label for="f-dividi">Dividi per<select id="f-dividi"></select></label>
+    <span class="conteggio" id="conteggio"></span>
+  </form>
+
+  <main id="gruppi"><p class="vuoto">Carico i personaggi…</p></main>
+  <p class="nota">Posizioni calcolate con Swiss Ephemeris. Ora di nascita dal dataset Astro-Seek quando c'è; altrimenti posizioni a metà giornata e Luna tratteggiata se nel giorno cambia segno. Aspetti di Venere con orbite di Liz Greene (☌☍ 10°, □△ 8°, ⚹ 6°).</p>
+</div>
+
+<dialog id="dettaglio"><button class="chiudi" id="chiudi" type="button">Chiudi</button><div id="dett-corpo"></div></dialog>
+
+<script>
+const SEGNI=["Ariete","Toro","Gemelli","Cancro","Leone","Vergine","Bilancia","Scorpione","Sagittario","Capricorno","Acquario","Pesci"];
+const GS=["♈","♉","♊","♋","♌","♍","♎","♏","♐","♑","♒","♓"];
+const PIANETI=[["Sole","☉","--sole"],["Luna","☽","--luna"],["Mercurio","☿","--mercurio"],["Venere","♀","--venere"],["Marte","♂","--marte"],["Giove","♃","--giove"],["Saturno","♄","--saturno"],["Urano","♅","--urano"],["Nettuno","♆","--nettuno"],["Plutone","♇","--plutone"]];
+const GP=Object.fromEntries(PIANETI.map(p=>[p[1],p]));
+const NOME_ASP={"☌":"congiunzione","☍":"opposizione","□":"quadrato","△":"trigono","⚹":"sestile"};
+const $=s=>document.querySelector(s);
+let D=[];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function opzioni(sel,valori,scelto){sel.innerHTML=valori.map(([v,t])=>`<option value="${v}"${v===scelto?" selected":""}>${t}</option>`).join("")}
+
+function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
+
+function scheda(p){
+  const luna=p.luna_incerta?`<span class="chip incerta" title="Ora di nascita ignota: in quel giorno la Luna cambia segno"><b>☽</b> ${p.luna_incerta.join("/")}</span>`:`<span class="chip"><b>☽</b> ${p.luna}</span>`;
+  const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
+    .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${13+a.forza*9}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
+  return `<button class="scheda" type="button" data-id="${p.id}">
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="corpo"><h3>${esc(p.nome)}</h3>
+      <div class="posizioni"><span class="chip"><b>☉</b> ${p.sole}</span><span class="chip"><b>♀</b> ${p.venere}</span>${luna}<span class="chip"><b>♂</b> ${p.segni.Marte}</span></div>
+      <div class="tocchi">Venere toccata da ${tocchi||"nessun pianeta"}</div></div></button>`;
+}
+
+function disegna(){
+  const sole=$("#f-sole").value, ven=$("#f-venere").value, div=$("#f-dividi").value;
+  const lista=D.filter(p=>(sole==="*"||p.sole===sole)&&(ven==="*"||p.venere===ven));
+  $("#conteggio").textContent=`${lista.length} personaggi`;
+  try{localStorage.setItem("venere-filtri",JSON.stringify({sole,ven,div}))}catch(e){}
+  if(!lista.length){$("#gruppi").innerHTML=`<p class="vuoto">Nessun personaggio con questa combinazione. Prova "Tutti" su Sole o Venere.</p>`;return}
+  const gruppi=new Map();
+  for(const p of lista){
+    const chiave=div==="-"?"Tutti":(div==="Luna"&&p.luna_incerta?p.luna_incerta.join(" o "):segnoDi(p,div));
+    if(!gruppi.has(chiave))gruppi.set(chiave,[]);gruppi.get(chiave).push(p);
+  }
+  const ordine=[...gruppi.keys()].sort((a,b)=>SEGNI.indexOf(a.split(" ")[0])-SEGNI.indexOf(b.split(" ")[0]));
+  const glifo=div==="-"?"":(PIANETI.find(x=>x[0]===div)||[])[1]||"";
+  $("#gruppi").innerHTML=ordine.map(k=>`<section class="gruppo"><h2><span class="glifo">${glifo}</span>${div==="-"?"Tutti":div+" in "+k}<small>${gruppi.get(k).length}</small></h2>
+    <div class="schede">${gruppi.get(k).map(scheda).join("")}</div></section>`).join("");
+}
+
+function ruota(p){
+  const R=180,c=190,pt=(lon,r)=>{const a=Math.PI*(180-lon)/180;return[c+r*Math.cos(a),c+r*Math.sin(a)]};
+  let s=`<svg class="ruota" viewBox="0 0 380 380" role="img" aria-label="Tema natale di ${esc(p.nome)}">`;
+  s+=`<circle cx="${c}" cy="${c}" r="${R}" fill="none" stroke="var(--linea)" stroke-width="1.5"/><circle cx="${c}" cy="${c}" r="${R-34}" fill="none" stroke="var(--linea)"/><circle cx="${c}" cy="${c}" r="70" fill="none" stroke="var(--linea)"/>`;
+  for(let i=0;i<12;i++){const[a,b]=pt(i*30,R),[x,y]=pt(i*30,R-34);s+=`<line x1="${a}" y1="${b}" x2="${x}" y2="${y}" stroke="var(--linea)"/>`;
+    const[gx,gy]=pt(i*30+15,R-17);s+=`<text x="${gx}" y="${gy}" text-anchor="middle" dominant-baseline="central" class="g" fill="${SEGNI[i]===p.sole?"var(--accento)":"var(--muto)"}" font-size="17">${GS[i]}</text>`}
+  const v=p.pos.Venere;
+  for(const a of p.asp_venere){const nome=GP[a.pianeta][0],[x1,y1]=pt(v,70),[x2,y2]=pt(p.pos[nome],70);
+    s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(${GP[a.pianeta][2]})" stroke-width="${1+a.forza*3}" stroke-opacity=".8"/>`}
+  const usati=[];
+  for(const[nome,g,col]of PIANETI){let lon=p.pos[nome],r=R-60;
+    while(usati.some(u=>Math.abs(((u.lon-lon+540)%360)-180)<8&&u.r===r))r-=24;usati.push({lon,r});
+    const[x,y]=pt(lon,r),[tx,ty]=pt(lon,R-34);
+    s+=`<line x1="${tx}" y1="${ty}" x2="${x}" y2="${y}" stroke="var(${col})" stroke-opacity=".35"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" class="g" fill="var(${col})" font-size="${nome==="Venere"?24:19}">${g}</text>`}
+  return s+"</svg>";
+}
+
+function apri(id){
+  const p=D.find(x=>x.id===id);if(!p)return;
+  const righe=PIANETI.map(([n,g,col])=>{const lon=p.pos[n],gr=Math.floor(lon%30),mi=Math.round((lon%1)*60);
+    const inc=n==="Luna"&&p.luna_incerta?` <span class="nota">(${p.luna_incerta.join(" o ")}: ora ignota)</span>`:"";
+    const a=p.asp_venere.filter(x=>GP[x.pianeta][0]===n).map(x=>NOME_ASP[x.asp]).join(", ");
+    return `<tr><td class="g" style="color:var(${col})">${g}</td><td>${n}</td><td>${SEGNI[Math.floor(lon/30)]} ${gr}°${String(mi).padStart(2,"0")}′${inc}</td><td class="nota">${a?"♀ "+a:""}</td></tr>`}).join("");
+  $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
+    <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
+    <table>${righe}</table></div></div>
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+  const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
+}
+
+$("#chiudi").addEventListener("click",()=>$("#dettaglio").close());
+$("#dettaglio").addEventListener("click",e=>{if(e.target.id==="dettaglio")$("#dettaglio").close()});
+$("#gruppi").addEventListener("click",e=>{const b=e.target.closest(".scheda");if(b)apri(b.dataset.id)});
+$("#filtri").addEventListener("change",disegna);
+$("#filtri").addEventListener("submit",e=>e.preventDefault());
+
+fetch("dati.json").then(r=>r.json()).then(dati=>{
+  D=dati;
+  let s={sole:"Vergine",ven:"Cancro",div:"Luna"};
+  try{s=Object.assign(s,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
+  const presenti=k=>SEGNI.filter(x=>D.some(p=>p[k]===x)).map(x=>[x,x]);
+  opzioni($("#f-sole"),[["*","Tutti"],...presenti("sole")],s.sole);
+  opzioni($("#f-venere"),[["*","Tutti"],...presenti("venere")],s.ven);
+  opzioni($("#f-dividi"),[["-","Non dividere"],...PIANETI.filter(p=>p[0]!=="Venere").map(p=>[p[0],p[0]])],s.div);
+  disegna();
+}).catch(()=>{$("#gruppi").innerHTML=`<p class="vuoto">Non riesco a caricare i dati. Ricarica la pagina.</p>`});
+</script>
