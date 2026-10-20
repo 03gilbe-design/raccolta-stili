@@ -1,15 +1,11 @@
-# Stato lavoro Codex
+# Stato lavoro Codex 3
 
-- Obiettivo: completare `COMPITO_CODEX.md`, verificare ogni fase, creare `REPORT_CODEX.md`, commit e push.
-- Modalita: DEEP.
+- Obiettivo: eseguire solo passi 1–3 di `COMPITO_CODEX_3.md`, creare `REPORT_CODEX_3.md`, commit e push senza `foto/` e `dati.json`.
+- Modalità: DEEP.
 - Cartella progetto: `C:\Users\Gilberto Bizzo\venere-vestiti`.
-- File importanti: `COMPITO_CODEX.md`, `PER_CODEX.md`, `dati.json`, `difficolta.json`, `index.html`, `foto/`, `C:\astrologia\04_venere_vestiti\pagina\gen_dati.py`, `ore_astroseek.py`, `ore_astroseek.json`.
-- Stato iniziale: branch `main` allineato a `origin/main`; working tree con 192 foto tracciate eliminate e 6 WebP non tracciate, probabilmente generazione interrotta.
-- Verificato: incarico e istruzioni locali letti; script esterni presenti.
-- Da fare: rigenerare e verificare foto; ricerca difficolta con fonti; tentare slug mancanti; report; commit e push per fase.
-- Ripresa: `git status --short --branch`, poi eseguire fase corrente indicata qui.
-- Rischi: poca RAM; un solo processo pesante; preservare cambi preesistenti e non inventare dati/orari.
-
-## Fase corrente
-
-1. Rigenerazione foto.
+- File importanti: `COMPITO_CODEX_3.md`, `CANDIDATI_LUNA.md`, `REPORT_CODEX_3.md`, script esterni `figure.py` e `aspetti.py`, `references/pinterest/`.
+- Fatto: selezionate e aggiunte 33 persone; tre combinazioni senza alternativa; scaricate 4–5 foto per persona.
+- Verificato: sintassi AST, presenza nomi, chiavi dataset, conteggi foto, decodifica Pillow e assenza duplicati locali.
+- Non eseguito: `gen_dati.py`, `temi_astroseek.py`, modelli immagini, modifica `dati.json`.
+- Consegna: `REPORT_CODEX_3.md` e questo stato nel commit; foto, `dati.json`, log e file preesistenti esclusi.
+- Rischi: worktree preesistente molto sporco; usare staging esplicito e non includere foto o `dati.json`.
