@@ -68,7 +68,9 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .mostra{position:absolute;z-index:5;top:calc(100% + 6px);left:0;width:max-content;max-width:min(320px,80vw);border:1px solid var(--linea);border-radius:8px;background:var(--carta);margin:0;padding:12px 14px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
 .mostra legend{float:left;margin-bottom:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .filtri .mostra label{flex-direction:row;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
-body.no-pianeti .tocchi,body.no-segni .posizioni{display:none}
+body.no-pianeti .tocchi,body.no-segni .posizioni,body.no-diff .diff{display:none}
+.diff{display:flex;flex-wrap:wrap;gap:4px}
+.diff a{font-size:12px;border-radius:99px;padding:2px 9px;background:var(--accento-tenue);color:var(--ink);text-decoration:none}
 body.solo-prima .nastro img:not(:first-child){display:none}
 .conteggio{margin-left:auto;color:var(--muto);font-variant-numeric:tabular-nums}
 .gruppo{margin-top:34px}
@@ -122,6 +124,7 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
         <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
         <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
         <label><input type="checkbox" id="m-foto" checked> Tutte le foto</label>
+        <label><input type="checkbox" id="m-diff"> Difficoltà (dichiarate, con fonte)</label>
       </fieldset>
     </details>
     <span class="conteggio" id="conteggio"></span>
@@ -140,7 +143,7 @@ const PIANETI=[["Sole","☉","--sole"],["Luna","☽","--luna"],["Mercurio","☿"
 const GP=Object.fromEntries(PIANETI.map(p=>[p[1],p]));
 const NOME_ASP={"☌":"congiunzione","☍":"opposizione","□":"quadrato","△":"trigono","⚹":"sestile"};
 const $=s=>document.querySelector(s);
-let D=[];
+let D=[], DIFF={};  // DIFF: difficolta.json (opzionale), id personaggio -> [{tema, nota, fonte}]
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
@@ -182,7 +185,8 @@ function scheda(p){
     <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10201631" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
-      <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div></div></button>`;
+      <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
+      ${(DIFF[p.id]||[]).length?`<div class="diff">${DIFF[p.id].map(x=>`<a href="${esc(x.fonte)}" target="_blank" rel="noopener" title="${esc(x.nota||"")}">${esc(x.tema)}</a>`).join("")}</div>`:""}</div></button>`;
 }
 
 function disegna(){
@@ -239,9 +243,10 @@ function mostra(){  // cosa far vedere nelle schede: lo sceglie chi guarda
   document.body.classList.toggle("no-pianeti",!$("#m-pianeti").checked);
   document.body.classList.toggle("no-segni",!$("#m-segni").checked);
   document.body.classList.toggle("solo-prima",!$("#m-foto").checked);
-  try{localStorage.setItem("venere-mostra",JSON.stringify(["m-pianeti","m-segni","m-foto"].map(id=>$("#"+id).checked)))}catch(e){}
+  document.body.classList.toggle("no-diff",!$("#m-diff").checked);
+  try{localStorage.setItem("venere-mostra",JSON.stringify(["m-pianeti","m-segni","m-foto","m-diff"].map(id=>$("#"+id).checked)))}catch(e){}
 }
-try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
+try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto","m-diff"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
 mostra();
 $("#filtri").addEventListener("change",e=>{
   if(e.target.type==="checkbox")return mostra();
@@ -261,6 +266,7 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
 fetch("dati.json?v=10201631").then(r=>r.json()).then(dati=>{
   D=dati;
+  fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};disegna()}).catch(()=>{});
   try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
   filtriUI();
   disegna();

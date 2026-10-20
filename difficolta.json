@@ -1,0 +1,3 @@
+{
+  "_istruzioni": "id personaggio (come in dati.json) -> lista di {tema, nota, fonte}. Solo cose dichiarate dalla persona o documentate da fonti serie, sempre con link alla fonte."
+}
