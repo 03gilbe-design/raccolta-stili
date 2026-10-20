@@ -32,7 +32,13 @@ header h1 em{font-style:italic;font-weight:500;color:var(--accento)}
 header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .filtri{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:end;margin:26px 0 8px;padding:16px 0;border-block:1px solid var(--linea)}
 .filtri label{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
-.filtri select{font:500 15px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:6px;padding:8px 30px 8px 10px;min-width:150px}
+.filtri select{appearance:none;-webkit-appearance:none;font:500 15px var(--testo);color:var(--ink);
+  background-color:var(--carta);border:1px solid var(--linea);border-radius:8px;height:42px;padding:0 40px 0 14px;min-width:170px;cursor:pointer;
+  background-image:linear-gradient(45deg,transparent 50%,var(--muto) 50%),linear-gradient(135deg,var(--muto) 50%,transparent 50%);
+  background-position:calc(100% - 20px) 18px,calc(100% - 14px) 18px;background-size:6px 6px;background-repeat:no-repeat}
+.filtri select:hover{border-color:var(--accento)}
+.filtri select option:disabled{color:var(--muto)}
+.ingranaggio summary{height:42px;display:flex;align-items:center}
 .filtri select:focus-visible,button:focus-visible,.scheda:focus-visible{outline:2px solid var(--accento);outline-offset:2px}
 .fgruppo{display:flex;flex-direction:column;gap:6px;min-width:0;flex-basis:100%}
 .flab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
@@ -129,7 +135,7 @@ const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
 
 // tendina: [valore, testo, numero di personaggi o null]; con 0 personaggi l'opzione e' spenta
 function pillole(el,valori,scelto){
-  el.innerHTML=valori.map(([v,t,n])=>`<option value="${v}"${v===scelto?" selected":""}${n===0?" disabled":""}>${t}${n==null?"":` (${n})`}</option>`).join("");
+  el.innerHTML=valori.map(([v,t,n])=>`<option value="${v}"${v===scelto?" selected":""}${n===0?" disabled":""}>${t}</option>`).join("");
 }
 
 // Venere sta al massimo ~47° dal Sole: solo i 2 segni prima e i 2 dopo il segno solare sono possibili
