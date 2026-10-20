@@ -34,6 +34,15 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .filtri label{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .filtri select{font:500 15px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:6px;padding:8px 30px 8px 10px;min-width:150px}
 .filtri select:focus-visible,button:focus-visible,.scheda:focus-visible{outline:2px solid var(--accento);outline-offset:2px}
+.fgruppo{display:flex;flex-direction:column;gap:6px;min-width:0;flex-basis:100%}
+.flab{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills button{font:500 14px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:99px;padding:6px 13px;cursor:pointer}
+.pills button small{color:var(--muto);font-weight:400;margin-left:4px;font-variant-numeric:tabular-nums}
+.pills button[aria-pressed="true"]{background:var(--accento);border-color:var(--accento);color:#fff}
+.pills button[aria-pressed="true"] small{color:#fff;opacity:.8}
+.pills button:disabled{opacity:.35;cursor:default}
+.pills button:hover:not(:disabled):not([aria-pressed="true"]){border-color:var(--accento)}
 .mostra{border:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
 .mostra legend{float:left;margin-right:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .filtri .mostra label{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
@@ -83,9 +92,9 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
   </header>
 
   <form class="filtri" id="filtri">
-    <label for="f-sole">Sole<select id="f-sole"></select></label>
-    <label for="f-venere">Venere<select id="f-venere"></select></label>
-    <label for="f-dividi">Dividi per<select id="f-dividi"></select></label>
+    <div class="fgruppo"><span class="flab">Sole</span><div class="pills" id="f-sole" data-chiave="sole"></div></div>
+    <div class="fgruppo"><span class="flab">Venere</span><div class="pills" id="f-venere" data-chiave="ven"></div></div>
+    <div class="fgruppo"><span class="flab">Dividi per</span><div class="pills" id="f-dividi" data-chiave="div"></div></div>
     <fieldset class="mostra"><legend>Mostra</legend>
       <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
       <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
@@ -110,7 +119,29 @@ const $=s=>document.querySelector(s);
 let D=[];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-function opzioni(sel,valori,scelto){sel.innerHTML=valori.map(([v,t])=>`<option value="${v}"${v===scelto?" selected":""}>${t}</option>`).join("")}
+const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
+
+// bottoni a pillola: [valore, testo, numero di personaggi o null]
+function pillole(el,valori,scelto){
+  el.innerHTML=valori.map(([v,t,n])=>`<button type="button" data-v="${v}" aria-pressed="${v===scelto}"${n===0?" disabled":""}>${t}${n==null?"":`<small>${n}</small>`}</button>`).join("");
+}
+
+// Venere sta al massimo ~47° dal Sole: solo i 2 segni prima e i 2 dopo il segno solare sono possibili
+function venerePossibili(sole){
+  if(sole==="*")return SEGNI.filter(x=>D.some(p=>p.venere===x));
+  const i=SEGNI.indexOf(sole);
+  return [-2,-1,0,1,2].map(k=>SEGNI[(i+k+12)%12]);
+}
+
+function filtriUI(){
+  const conta=(k,v,extra=()=>true)=>D.filter(p=>p[k]===v&&extra(p)).length;
+  pillole($("#f-sole"),[["*","Tutti",D.length],...SEGNI.filter(x=>D.some(p=>p.sole===x)).map(x=>[x,x,conta("sole",x)])],S.sole);
+  const poss=venerePossibili(S.sole);
+  if(S.ven!=="*"&&!poss.includes(S.ven))S.ven="*";
+  const delSole=p=>S.sole==="*"||p.sole===S.sole;
+  pillole($("#f-venere"),[["*","Tutti",D.filter(delSole).length],...poss.map(x=>[x,x,conta("venere",x,delSole)])],S.ven);
+  pillole($("#f-dividi"),[["-","Non dividere",null],...PIANETI.filter(p=>p[0]!=="Venere").map(p=>[p[0],p[0],null])],S.div);
+}
 
 function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
 
@@ -126,7 +157,7 @@ function scheda(p){
 }
 
 function disegna(){
-  const sole=$("#f-sole").value, ven=$("#f-venere").value, div=$("#f-dividi").value;
+  const {sole,ven,div}=S;
   const lista=D.filter(p=>(sole==="*"||p.sole===sole)&&(ven==="*"||p.venere===ven));
   $("#conteggio").textContent=`${lista.length} personaggi`;
   try{localStorage.setItem("venere-filtri",JSON.stringify({sole,ven,div}))}catch(e){}
@@ -185,15 +216,16 @@ try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-p
 mostra();
 $("#filtri").addEventListener("change",e=>{if(e.target.type==="checkbox")mostra();else disegna()});
 $("#filtri").addEventListener("submit",e=>e.preventDefault());
+$("#filtri").addEventListener("click",e=>{
+  const b=e.target.closest(".pills button");if(!b||b.disabled)return;
+  S[b.parentElement.dataset.chiave]=b.dataset.v;
+  filtriUI();disegna();
+});
 
 fetch("dati.json?v=10201535").then(r=>r.json()).then(dati=>{
   D=dati;
-  let s={sole:"Vergine",ven:"Cancro",div:"Luna"};
-  try{s=Object.assign(s,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
-  const presenti=k=>SEGNI.filter(x=>D.some(p=>p[k]===x)).map(x=>[x,x]);
-  opzioni($("#f-sole"),[["*","Tutti"],...presenti("sole")],s.sole);
-  opzioni($("#f-venere"),[["*","Tutti"],...presenti("venere")],s.ven);
-  opzioni($("#f-dividi"),[["-","Non dividere"],...PIANETI.filter(p=>p[0]!=="Venere").map(p=>[p[0],p[0]])],s.div);
+  try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
+  filtriUI();
   disegna();
 }).catch(()=>{$("#gruppi").innerHTML=`<p class="vuoto">Non riesco a caricare i dati. Ricarica la pagina.</p>`});
 </script>
