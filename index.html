@@ -182,7 +182,7 @@ function scheda(p){
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
   return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10201631" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10210013" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
       <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
@@ -232,7 +232,7 @@ function apri(id){
   $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
     <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
     <table>${righe}</table></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10201631" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10210013" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
@@ -264,7 +264,7 @@ document.addEventListener("click",e=>{  // rotella e tendine si chiudono toccand
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
-fetch("dati.json?v=10201631").then(r=>r.json()).then(dati=>{
+fetch("dati.json?v=10210013").then(r=>r.json()).then(dati=>{
   D=dati;
   fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};disegna()}).catch(()=>{});
   try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
