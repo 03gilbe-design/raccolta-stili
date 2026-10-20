@@ -42,8 +42,10 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .schede{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
 .scheda{background:var(--carta);border:1px solid var(--linea);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;min-width:0;text-align:left;padding:0;color:inherit;font:inherit}
 .scheda:hover{border-color:var(--accento)}
-.nastro{display:flex;gap:4px;overflow-x:auto;background:var(--bg);padding:6px;scroll-snap-type:x mandatory}
-.nastro img{height:230px;width:auto;border-radius:4px;scroll-snap-align:start;flex:none;object-fit:cover}
+/* tutte le foto visibili insieme: vanno a capo invece di scorrere di lato */
+.nastro{display:flex;flex-wrap:wrap;gap:4px;background:var(--bg);padding:6px}
+.nastro img{height:150px;width:auto;max-width:100%;border-radius:4px;object-fit:cover;flex:1 1 auto}
+.nastro img:first-child{height:260px}
 .corpo{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px}
 .corpo h3{font-family:var(--display);font-weight:700;font-size:21px;margin:0;line-height:1.15}
 .posizioni{display:flex;flex-wrap:wrap;gap:6px}
@@ -107,7 +109,7 @@ function scheda(p){
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span style="color:var(${GP[a.pianeta][2]});font-weight:${a.forza>.6?600:400}" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${GP[a.pianeta][0]}</span>`).join(", ");
   return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10201535" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
       <div class="tocchi"><span>Venere toccata da ${tocchi||"nessun pianeta"}</span></div></div></button>`;
@@ -156,7 +158,7 @@ function apri(id){
   $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
     <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
     <table>${righe}</table></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10201535" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
@@ -166,7 +168,7 @@ $("#gruppi").addEventListener("click",e=>{const b=e.target.closest(".scheda");if
 $("#filtri").addEventListener("change",disegna);
 $("#filtri").addEventListener("submit",e=>e.preventDefault());
 
-fetch("dati.json").then(r=>r.json()).then(dati=>{
+fetch("dati.json?v=10201535").then(r=>r.json()).then(dati=>{
   D=dati;
   let s={sole:"Vergine",ven:"Cancro",div:"Luna"};
   try{s=Object.assign(s,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
