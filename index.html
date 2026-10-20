@@ -43,9 +43,13 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .pills button[aria-pressed="true"] small{color:#fff;opacity:.8}
 .pills button:disabled{opacity:.35;cursor:default}
 .pills button:hover:not(:disabled):not([aria-pressed="true"]){border-color:var(--accento)}
-.mostra{border:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
-.mostra legend{float:left;margin-right:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
-.filtri .mostra label{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
+.ingranaggio{position:relative;align-self:end}
+.ingranaggio summary{list-style:none;cursor:pointer;font-size:22px;line-height:1;padding:7px 10px;border:1px solid var(--linea);border-radius:6px;background:var(--carta);color:var(--muto)}
+.ingranaggio summary::-webkit-details-marker{display:none}
+.ingranaggio[open] summary{color:var(--accento);border-color:var(--accento)}
+.mostra{position:absolute;z-index:5;top:calc(100% + 6px);left:0;width:max-content;max-width:min(320px,80vw);border:1px solid var(--linea);border-radius:8px;background:var(--carta);margin:0;padding:12px 14px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.mostra legend{float:left;margin-bottom:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
+.filtri .mostra label{flex-direction:row;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
 body.no-pianeti .tocchi,body.no-segni .posizioni{display:none}
 body.solo-prima .nastro img:not(:first-child){display:none}
 .conteggio{margin-left:auto;color:var(--muto);font-variant-numeric:tabular-nums}
@@ -92,14 +96,16 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
   </header>
 
   <form class="filtri" id="filtri">
-    <div class="fgruppo"><span class="flab">Sole</span><div class="pills" id="f-sole" data-chiave="sole"></div></div>
-    <div class="fgruppo"><span class="flab">Venere</span><div class="pills" id="f-venere" data-chiave="ven"></div></div>
-    <div class="fgruppo"><span class="flab">Dividi per</span><div class="pills" id="f-dividi" data-chiave="div"></div></div>
-    <fieldset class="mostra"><legend>Mostra</legend>
-      <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
-      <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
-      <label><input type="checkbox" id="m-foto" checked> Tutte le foto</label>
-    </fieldset>
+    <label for="f-sole">Sole<select id="f-sole" data-chiave="sole"></select></label>
+    <label for="f-venere">Venere<select id="f-venere" data-chiave="ven"></select></label>
+    <label for="f-dividi">Dividi per<select id="f-dividi" data-chiave="div"></select></label>
+    <details class="ingranaggio"><summary aria-label="Impostazioni">⚙</summary>
+      <fieldset class="mostra"><legend>Mostra</legend>
+        <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
+        <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
+        <label><input type="checkbox" id="m-foto" checked> Tutte le foto</label>
+      </fieldset>
+    </details>
     <span class="conteggio" id="conteggio"></span>
   </form>
 
@@ -121,9 +127,9 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
 
-// bottoni a pillola: [valore, testo, numero di personaggi o null]
+// tendina: [valore, testo, numero di personaggi o null]; con 0 personaggi l'opzione e' spenta
 function pillole(el,valori,scelto){
-  el.innerHTML=valori.map(([v,t,n])=>`<button type="button" data-v="${v}" aria-pressed="${v===scelto}"${n===0?" disabled":""}>${t}${n==null?"":`<small>${n}</small>`}</button>`).join("");
+  el.innerHTML=valori.map(([v,t,n])=>`<option value="${v}"${v===scelto?" selected":""}${n===0?" disabled":""}>${t}${n==null?"":` (${n})`}</option>`).join("");
 }
 
 // Venere sta al massimo ~47° dal Sole: solo i 2 segni prima e i 2 dopo il segno solare sono possibili
@@ -214,12 +220,14 @@ function mostra(){  // cosa far vedere nelle schede: lo sceglie chi guarda
 }
 try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
 mostra();
-$("#filtri").addEventListener("change",e=>{if(e.target.type==="checkbox")mostra();else disegna()});
-$("#filtri").addEventListener("submit",e=>e.preventDefault());
-$("#filtri").addEventListener("click",e=>{
-  const b=e.target.closest(".pills button");if(!b||b.disabled)return;
-  S[b.parentElement.dataset.chiave]=b.dataset.v;
+$("#filtri").addEventListener("change",e=>{
+  if(e.target.type==="checkbox")return mostra();
+  S[e.target.dataset.chiave]=e.target.value;
   filtriUI();disegna();
+});
+$("#filtri").addEventListener("submit",e=>e.preventDefault());
+document.addEventListener("click",e=>{  // la rotella si chiude toccando fuori
+  const g=$(".ingranaggio");if(g.open&&!g.contains(e.target))g.open=false;
 });
 
 fetch("dati.json?v=10201535").then(r=>r.json()).then(dati=>{
