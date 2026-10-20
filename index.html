@@ -34,6 +34,11 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .filtri label{display:flex;flex-direction:column;gap:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .filtri select{font:500 15px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:6px;padding:8px 30px 8px 10px;min-width:150px}
 .filtri select:focus-visible,button:focus-visible,.scheda:focus-visible{outline:2px solid var(--accento);outline-offset:2px}
+.mostra{border:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.mostra legend{float:left;margin-right:6px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
+.filtri .mostra label{flex-direction:row;align-items:center;gap:6px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
+body.no-pianeti .tocchi,body.no-segni .posizioni{display:none}
+body.solo-prima .nastro img:not(:first-child){display:none}
 .conteggio{margin-left:auto;color:var(--muto);font-variant-numeric:tabular-nums}
 .gruppo{margin-top:34px}
 .gruppo h2{font-family:var(--display);font-weight:500;font-style:italic;font-size:30px;margin:0 0 14px;display:flex;align-items:baseline;gap:12px}
@@ -81,6 +86,11 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
     <label for="f-sole">Sole<select id="f-sole"></select></label>
     <label for="f-venere">Venere<select id="f-venere"></select></label>
     <label for="f-dividi">Dividi per<select id="f-dividi"></select></label>
+    <fieldset class="mostra"><legend>Mostra</legend>
+      <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
+      <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
+      <label><input type="checkbox" id="m-foto" checked> Tutte le foto</label>
+    </fieldset>
     <span class="conteggio" id="conteggio"></span>
   </form>
 
@@ -107,12 +117,12 @@ function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
 function scheda(p){
   const luna=p.luna_incerta?`<span class="chip incerta" title="Ora di nascita ignota: in quel giorno la Luna cambia segno">Luna ${p.luna_incerta.join("/")}</span>`:`<span class="chip">Luna <b>${p.luna}</b></span>`;
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
-    .map(a=>`<span style="color:var(${GP[a.pianeta][2]});font-weight:${a.forza>.6?600:400}" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${GP[a.pianeta][0]}</span>`).join(", ");
+    .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
   return `<button class="scheda" type="button" data-id="${p.id}">
     <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10201535" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
-      <div class="tocchi"><span>Venere toccata da ${tocchi||"nessun pianeta"}</span></div></div></button>`;
+      <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div></div></button>`;
 }
 
 function disegna(){
@@ -165,7 +175,15 @@ function apri(id){
 $("#chiudi").addEventListener("click",()=>$("#dettaglio").close());
 $("#dettaglio").addEventListener("click",e=>{if(e.target.id==="dettaglio")$("#dettaglio").close()});
 $("#gruppi").addEventListener("click",e=>{const b=e.target.closest(".scheda");if(b)apri(b.dataset.id)});
-$("#filtri").addEventListener("change",disegna);
+function mostra(){  // cosa far vedere nelle schede: lo sceglie chi guarda
+  document.body.classList.toggle("no-pianeti",!$("#m-pianeti").checked);
+  document.body.classList.toggle("no-segni",!$("#m-segni").checked);
+  document.body.classList.toggle("solo-prima",!$("#m-foto").checked);
+  try{localStorage.setItem("venere-mostra",JSON.stringify(["m-pianeti","m-segni","m-foto"].map(id=>$("#"+id).checked)))}catch(e){}
+}
+try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
+mostra();
+$("#filtri").addEventListener("change",e=>{if(e.target.type==="checkbox")mostra();else disegna()});
 $("#filtri").addEventListener("submit",e=>e.preventDefault());
 
 fetch("dati.json?v=10201535").then(r=>r.json()).then(dati=>{
