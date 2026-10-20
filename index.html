@@ -37,6 +37,18 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
   background-image:linear-gradient(45deg,transparent 50%,var(--muto) 50%),linear-gradient(135deg,var(--muto) 50%,transparent 50%);
   background-position:calc(100% - 20px) 18px,calc(100% - 14px) 18px;background-size:6px 6px;background-repeat:no-repeat}
 .filtri select:hover{border-color:var(--accento)}
+.campo{display:flex;flex-direction:column;gap:4px}
+.tendina{position:relative}
+.t-btn{font:500 15px var(--testo);color:var(--ink);background:var(--carta);border:1px solid var(--linea);border-radius:10px;height:42px;min-width:170px;padding:0 40px 0 14px;text-align:left;cursor:pointer;position:relative}
+.t-btn::after{content:"";position:absolute;right:15px;top:16px;width:7px;height:7px;border-right:2px solid var(--accento);border-bottom:2px solid var(--accento);transform:rotate(45deg);transition:transform .15s}
+.t-btn[aria-expanded="true"]{border-color:var(--accento)}
+.t-btn[aria-expanded="true"]::after{transform:rotate(-135deg);top:20px}
+.t-btn:hover{border-color:var(--accento)}
+.t-lista{position:absolute;z-index:6;top:calc(100% + 6px);left:0;min-width:100%;margin:0;padding:6px;list-style:none;background:var(--carta);border:1px solid var(--linea);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.t-lista li{padding:8px 12px;border-radius:7px;cursor:pointer;white-space:nowrap}
+.t-lista li:hover{background:var(--accento-tenue)}
+.t-lista li[aria-selected="true"]{color:var(--accento);font-weight:600}
+.t-lista li[aria-disabled="true"]{opacity:.35;cursor:default;background:none}
 .filtri select option:disabled{color:var(--muto)}
 .ingranaggio summary{height:42px;display:flex;align-items:center}
 .filtri select:focus-visible,button:focus-visible,.scheda:focus-visible{outline:2px solid var(--accento);outline-offset:2px}
@@ -102,9 +114,9 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
   </header>
 
   <form class="filtri" id="filtri">
-    <label for="f-sole">Sole<select id="f-sole" data-chiave="sole"></select></label>
-    <label for="f-venere">Venere<select id="f-venere" data-chiave="ven"></select></label>
-    <label for="f-dividi">Dividi per<select id="f-dividi" data-chiave="div"></select></label>
+    <div class="campo"><span class="flab">Sole</span><div class="tendina" id="f-sole" data-chiave="sole"></div></div>
+    <div class="campo"><span class="flab">Venere</span><div class="tendina" id="f-venere" data-chiave="ven"></div></div>
+    <div class="campo"><span class="flab">Dividi per</span><div class="tendina" id="f-dividi" data-chiave="div"></div></div>
     <details class="ingranaggio"><summary aria-label="Impostazioni">⚙</summary>
       <fieldset class="mostra"><legend>Mostra</legend>
         <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
@@ -133,10 +145,13 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 
 const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
 
-// tendina: [valore, testo, numero di personaggi o null]; con 0 personaggi l'opzione e' spenta
+// tendina fatta a mano (non quella grigia del sistema): bottone + lista; con 0 personaggi la voce e' spenta
 function pillole(el,valori,scelto){
-  el.innerHTML=valori.map(([v,t,n])=>`<option value="${v}"${v===scelto?" selected":""}${n===0?" disabled":""}>${t}</option>`).join("");
+  const att=valori.find(x=>x[0]===scelto)||valori[0];
+  el.innerHTML=`<button type="button" class="t-btn" aria-haspopup="listbox" aria-expanded="false">${att[1]}</button>
+    <ul class="t-lista" role="listbox" hidden>${valori.map(([v,t,n])=>`<li role="option" data-v="${v}" aria-selected="${v===scelto}"${n===0?' aria-disabled="true"':""}>${t}</li>`).join("")}</ul>`;
 }
+function chiudiTendine(tranne){document.querySelectorAll(".tendina").forEach(t=>{if(t!==tranne){t.querySelector(".t-lista").hidden=true;t.querySelector(".t-btn").setAttribute("aria-expanded","false")}})}
 
 // Venere sta al massimo ~47° dal Sole: solo i 2 segni prima e i 2 dopo il segno solare sono possibili
 function venerePossibili(sole){
@@ -152,7 +167,9 @@ function filtriUI(){
   if(S.ven!=="*"&&!poss.includes(S.ven))S.ven="*";
   const delSole=p=>S.sole==="*"||p.sole===S.sole;
   pillole($("#f-venere"),[["*","Tutti",D.filter(delSole).length],...poss.map(x=>[x,x,conta("venere",x,delSole)])],S.ven);
-  pillole($("#f-dividi"),[["-","Non dividere",null],...PIANETI.filter(p=>p[0]!=="Venere").map(p=>[p[0],p[0],null])],S.div);
+  // solo pianeti veloci: quelli lenti (Giove..Plutone) sono uguali per chi e' nato nello stesso periodo
+  if(!["-","Luna","Mercurio","Marte"].includes(S.div))S.div="Luna";
+  pillole($("#f-dividi"),[["-","Non dividere",null],["Luna","Luna",null],["Mercurio","Mercurio",null],["Marte","Marte",null]],S.div);
 }
 
 function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
@@ -232,9 +249,15 @@ $("#filtri").addEventListener("change",e=>{
   filtriUI();disegna();
 });
 $("#filtri").addEventListener("submit",e=>e.preventDefault());
-document.addEventListener("click",e=>{  // la rotella si chiude toccando fuori
+document.addEventListener("click",e=>{  // rotella e tendine si chiudono toccando fuori
   const g=$(".ingranaggio");if(g.open&&!g.contains(e.target))g.open=false;
+  const t=e.target.closest(".tendina");
+  if(!t)return chiudiTendine();
+  const btn=e.target.closest(".t-btn"), voce=e.target.closest("li[data-v]");
+  if(btn){const l=t.querySelector(".t-lista");chiudiTendine(t);l.hidden=!l.hidden;btn.setAttribute("aria-expanded",String(!l.hidden));return}
+  if(voce&&voce.getAttribute("aria-disabled")!=="true"){S[t.dataset.chiave]=voce.dataset.v;chiudiTendine();filtriUI();disegna()}
 });
+document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
 fetch("dati.json?v=10201631").then(r=>r.json()).then(dati=>{
   D=dati;
