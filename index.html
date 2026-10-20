@@ -83,7 +83,7 @@ td{padding:4px 6px;border-bottom:1px solid var(--linea)}
   </form>
 
   <main id="gruppi"><p class="vuoto">Carico i personaggi…</p></main>
-  <p class="nota">Posizioni calcolate con Swiss Ephemeris. Ora di nascita dal dataset Astro-Seek quando c'è; altrimenti posizioni a metà giornata e Luna tratteggiata se nel giorno cambia segno. Aspetti di Venere con orbite di Liz Greene (☌☍ 10°, □△ 8°, ⚹ 6°).</p>
+  <p class="nota">Posizioni calcolate con Swiss Ephemeris. Ora di nascita dal dataset Astro-Seek quando c'è; altrimenti posizioni a metà giornata e Luna tratteggiata se nel giorno cambia segno. Aspetti di Venere con orbite di Liz Greene (congiunzione e opposizione 10°, quadrato e trigono 8°, sestile 6°). Foto: scelte a mano e da Pinterest.</p>
 </div>
 
 <dialog id="dettaglio"><button class="chiudi" id="chiudi" type="button">Chiudi</button><div id="dett-corpo"></div></dialog>
@@ -103,14 +103,14 @@ function opzioni(sel,valori,scelto){sel.innerHTML=valori.map(([v,t])=>`<option v
 function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
 
 function scheda(p){
-  const luna=p.luna_incerta?`<span class="chip incerta" title="Ora di nascita ignota: in quel giorno la Luna cambia segno"><b>☽</b> ${p.luna_incerta.join("/")}</span>`:`<span class="chip"><b>☽</b> ${p.luna}</span>`;
+  const luna=p.luna_incerta?`<span class="chip incerta" title="Ora di nascita ignota: in quel giorno la Luna cambia segno">Luna ${p.luna_incerta.join("/")}</span>`:`<span class="chip">Luna <b>${p.luna}</b></span>`;
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
-    .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${13+a.forza*9}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
+    .map(a=>`<span style="color:var(${GP[a.pianeta][2]});font-weight:${a.forza>.6?600:400}" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${GP[a.pianeta][0]}</span>`).join(", ");
   return `<button class="scheda" type="button" data-id="${p.id}">
     <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
-      <div class="posizioni"><span class="chip"><b>☉</b> ${p.sole}</span><span class="chip"><b>♀</b> ${p.venere}</span>${luna}<span class="chip"><b>♂</b> ${p.segni.Marte}</span></div>
-      <div class="tocchi">Venere toccata da ${tocchi||"nessun pianeta"}</div></div></button>`;
+      <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
+      <div class="tocchi"><span>Venere toccata da ${tocchi||"nessun pianeta"}</span></div></div></button>`;
 }
 
 function disegna(){
@@ -125,7 +125,7 @@ function disegna(){
     if(!gruppi.has(chiave))gruppi.set(chiave,[]);gruppi.get(chiave).push(p);
   }
   const ordine=[...gruppi.keys()].sort((a,b)=>SEGNI.indexOf(a.split(" ")[0])-SEGNI.indexOf(b.split(" ")[0]));
-  const glifo=div==="-"?"":(PIANETI.find(x=>x[0]===div)||[])[1]||"";
+  const glifo="";  // utente: niente simboli dei pianeti
   $("#gruppi").innerHTML=ordine.map(k=>`<section class="gruppo"><h2><span class="glifo">${glifo}</span>${div==="-"?"Tutti":div+" in "+k}<small>${gruppi.get(k).length}</small></h2>
     <div class="schede">${gruppi.get(k).map(scheda).join("")}</div></section>`).join("");
 }
@@ -152,7 +152,7 @@ function apri(id){
   const righe=PIANETI.map(([n,g,col])=>{const lon=p.pos[n],gr=Math.floor(lon%30),mi=Math.round((lon%1)*60);
     const inc=n==="Luna"&&p.luna_incerta?` <span class="nota">(${p.luna_incerta.join(" o ")}: ora ignota)</span>`:"";
     const a=p.asp_venere.filter(x=>GP[x.pianeta][0]===n).map(x=>NOME_ASP[x.asp]).join(", ");
-    return `<tr><td class="g" style="color:var(${col})">${g}</td><td>${n}</td><td>${SEGNI[Math.floor(lon/30)]} ${gr}°${String(mi).padStart(2,"0")}′${inc}</td><td class="nota">${a?"♀ "+a:""}</td></tr>`}).join("");
+    return `<tr><td style="color:var(${col});font-weight:600">${n}</td><td>${SEGNI[Math.floor(lon/30)]} ${gr}°${String(mi).padStart(2,"0")}′${inc}</td><td class="nota">${a?"con Venere: "+a:""}</td></tr>`}).join("");
   $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
     <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
     <table>${righe}</table></div></div>
