@@ -1,3 +1,101 @@
 {
-  "_istruzioni": "id personaggio (come in dati.json) -> lista di {tema, nota, fonte}. Solo cose dichiarate dalla persona o documentate da fonti serie, sempre con link alla fonte."
+  "_istruzioni": "id personaggio (come in dati.json) -> lista di {tema, nota, fonte}. Solo cose dichiarate dalla persona o documentate da fonti serie, sempre con link alla fonte.",
+  "danielradcliffe": [
+    {
+      "tema": "alcol",
+      "nota": "Usò l'alcol per affrontare fama e paura del fallimento.",
+      "fonte": "https://www.theguardian.com/film/2014/jun/16/daniel-radcliffe-alcohol-harry-potter"
+    }
+  ],
+  "caradelevingne": [
+    {
+      "tema": "dipendenza",
+      "nota": "Ha raccontato depressione, dipendenza e percorso verso la sobrietà.",
+      "fonte": "https://www.vogue.com/article/cara-delevingne-april-cover-2023-interview"
+    }
+  ],
+  "catherinezetajones": [
+    {
+      "tema": "bipolarismo",
+      "nota": "Ha ricevuto cure ospedaliere per disturbo bipolare II.",
+      "fonte": "https://www.theguardian.com/film/2011/apr/14/catherine-zeta-jones-bipolar-courage"
+    }
+  ],
+  "gwynethpaltrow": [
+    {
+      "tema": "depressione post-partum",
+      "nota": "Ha riferito depressione postnatale dopo la nascita del figlio Moses.",
+      "fonte": "https://www.theguardian.com/theobserver/2011/apr/24/observer-profile-gwyneth-paltrow-coldplay"
+    }
+  ],
+  "serenawilliams": [
+    {
+      "tema": "post-partum",
+      "nota": "Ha raccontato tristezza, crolli emotivi e sintomi persistenti dopo il parto.",
+      "fonte": "https://time.com/5368858/serena-williams-comeback/"
+    }
+  ],
+  "pink": [
+    {
+      "tema": "overdose",
+      "nota": "A sedici anni rischiò la morte per un'overdose di droghe.",
+      "fonte": "https://abc7chicago.com/post/singer-pink-overdose-interview-on-60-minutes-overtime/13963107/"
+    }
+  ],
+  "bellahadid": [
+    {
+      "tema": "depressione",
+      "nota": "Ha descritto depressione, ansia e problemi alimentari presenti dall'adolescenza.",
+      "fonte": "https://www.vogue.com/article/bella-hadid-cover-april-2022"
+    }
+  ],
+  "whitneyhouston": [
+    {
+      "tema": "dipendenza",
+      "nota": "Ammise uso di droghe e descrisse un matrimonio emotivamente abusivo.",
+      "fonte": "https://www.theguardian.com/theobserver/2009/sep/20/whitney-houston-observer-profile"
+    }
+  ],
+  "joeperry": [
+    {
+      "tema": "droghe",
+      "nota": "Nel memoir ha raccontato apertamente il proprio abuso di droghe.",
+      "fonte": "https://www.guitarworld.com/features/rocks-aerosmith-guitarist-joe-perry-talks-new-memoir-guitars-and-next"
+    }
+  ],
+  "shawnmendes": [
+    {
+      "tema": "ansia",
+      "nota": "L'ansia divenne così forte da impedirgli temporaneamente di cantare.",
+      "fonte": "https://www.theguardian.com/music/2020/dec/09/shawn-mendes-the-fear-strangled-me-i-really-fell-down"
+    }
+  ],
+  "fedez": [
+    {
+      "tema": "depressione",
+      "nota": "Dopo la malattia ha attraversato una depressione acuta.",
+      "fonte": "https://www.corriere.it/cronache/23_ottobre_07/fedez-intervista-35a88430-6478-11ee-b6dc-e5be88e81c69_amp.html"
+    }
+  ],
+  "gerihalliwell": [
+    {
+      "tema": "bulimia",
+      "nota": "Ha documentato nelle autobiografie il proprio disturbo alimentare.",
+      "fonte": "https://www.theguardian.com/books/2007/apr/15/features.review4"
+    }
+  ],
+  "andrewgarfield": [
+    {
+      "tema": "lutto",
+      "nota": "La morte della madre gli causò un dolore profondo e paralizzante.",
+      "fonte": "https://www.theguardian.com/film/2022/feb/19/andrew-garfield-reveals-precise-agony-of-losing-his-mother-to-cancer"
+    }
+  ],
+  "kimkardashian": [
+    {
+      "tema": "trauma",
+      "nota": "La rapina armata di Parigi le causò paura e trauma duraturi.",
+      "fonte": "https://apnews.com/article/kim-kardashian-trial-paris-fashion-week-b06a96edfa5271de2d92870dcafe2796"
+    }
+  ]
 }

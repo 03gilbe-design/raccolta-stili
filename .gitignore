@@ -1,2 +1,12 @@
+*.md
+codex_log*.txt
+_codex*
+COMPITO_*
+REPORT_*
+STATO_LAVORO.md
+CANDIDATI_*
+PER_CODEX.md
+prova_gemini.py
+fogli_pinterest.py
 references/
 _da_buttare/

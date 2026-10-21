@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta property="og:title" content="Venere e i vestiti"><meta property="og:description" content="Personaggi famosi per Sole e Venere: confronta i look, dividi per Luna, apri il tema natale."><meta property="og:image" content="https://03gilbe-design.github.io/raccolta-stili/anteprima.jpg"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Venere e i vestiti"><meta property="og:description" content="Personaggi famosi per Sole e Venere: confronta i look, dividi per Luna, apri il tema natale."><meta property="og:image" content="https://03gilbe-design.github.io/raccolta-stili/anteprima.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="628"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Venere e vestiti</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Instrument+Sans:wght@400;500;600&display=swap">
@@ -94,11 +94,12 @@ body.solo-prima .nastro img:not(:first-child){display:none}
 .g{font-family:"Segoe UI Symbol","Noto Sans Symbols 2","Apple Symbols",var(--testo);font-size:18px;line-height:1}
 dialog{border:none;border-radius:14px;padding:0;max-width:min(980px,96vw);width:100%;background:var(--carta);color:var(--ink)}
 dialog::backdrop{background:rgba(10,8,20,.6)}
-.dett{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:22px;padding:22px}
+.dett{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:22px;padding:22px}
 @media (max-width:760px){.dett{grid-template-columns:1fr}}
 .dett h2{font-family:var(--display);font-size:34px;margin:0}
 .dett .meta{color:var(--muto);font-size:13px}
-.ruota{width:100%;max-width:380px;aspect-ratio:1}
+.ruota{display:block;width:100%;max-width:420px;height:auto}
+.tema-meta{max-width:420px;margin:8px 0 0;color:var(--muto);font-size:13px}
 table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
 td{padding:4px 6px;border-bottom:1px solid var(--linea)}
 .galleria{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
@@ -143,7 +144,7 @@ const PIANETI=[["Sole","☉","--sole"],["Luna","☽","--luna"],["Mercurio","☿"
 const GP=Object.fromEntries(PIANETI.map(p=>[p[1],p]));
 const NOME_ASP={"☌":"congiunzione","☍":"opposizione","□":"quadrato","△":"trigono","⚹":"sestile"};
 const $=s=>document.querySelector(s);
-let D=[], DIFF={};  // DIFF: difficolta.json (opzionale), id personaggio -> [{tema, nota, fonte}]
+let D=[], DIFF={}, TEMI={};  // indici opzionali per difficolta e ruote Astro-Seek
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
@@ -182,7 +183,7 @@ function scheda(p){
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
   return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10210013" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10210442" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
       <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
@@ -207,20 +208,11 @@ function disegna(){
 }
 
 function ruota(p){
-  const R=180,c=190,pt=(lon,r)=>{const a=Math.PI*(180-lon)/180;return[c+r*Math.cos(a),c+r*Math.sin(a)]};
-  let s=`<svg class="ruota" viewBox="0 0 380 380" role="img" aria-label="Tema natale di ${esc(p.nome)}">`;
-  s+=`<circle cx="${c}" cy="${c}" r="${R}" fill="none" stroke="var(--linea)" stroke-width="1.5"/><circle cx="${c}" cy="${c}" r="${R-34}" fill="none" stroke="var(--linea)"/><circle cx="${c}" cy="${c}" r="70" fill="none" stroke="var(--linea)"/>`;
-  for(let i=0;i<12;i++){const[a,b]=pt(i*30,R),[x,y]=pt(i*30,R-34);s+=`<line x1="${a}" y1="${b}" x2="${x}" y2="${y}" stroke="var(--linea)"/>`;
-    const[gx,gy]=pt(i*30+15,R-17);s+=`<text x="${gx}" y="${gy}" text-anchor="middle" dominant-baseline="central" class="g" fill="${SEGNI[i]===p.sole?"var(--accento)":"var(--muto)"}" font-size="17">${GS[i]}</text>`}
-  const v=p.pos.Venere;
-  for(const a of p.asp_venere){const nome=GP[a.pianeta][0],[x1,y1]=pt(v,70),[x2,y2]=pt(p.pos[nome],70);
-    s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="var(${GP[a.pianeta][2]})" stroke-width="${1+a.forza*3}" stroke-opacity=".8"/>`}
-  const usati=[];
-  for(const[nome,g,col]of PIANETI){let lon=p.pos[nome],r=R-60;
-    while(usati.some(u=>Math.abs(((u.lon-lon+540)%360)-180)<8&&u.r===r))r-=24;usati.push({lon,r});
-    const[x,y]=pt(lon,r),[tx,ty]=pt(lon,R-34);
-    s+=`<line x1="${tx}" y1="${ty}" x2="${x}" y2="${y}" stroke="var(${col})" stroke-opacity=".35"/><text x="${x}" y="${y}" text-anchor="middle" dominant-baseline="central" class="g" fill="var(${col})" font-size="${nome==="Venere"?24:19}">${g}</text>`}
-  return s+"</svg>";
+  const t=TEMI[p.id];
+  if(!t)return `<p class="tema-meta">Tema natale non disponibile.</p>`;
+  const stato=t.case?"Case e Ascendente":"Ora di nascita ignota: niente case";
+  const link=t.pagina?` · <a href="${esc(t.pagina)}" target="_blank" rel="noopener">Apri su Astro-Seek</a>`:"";
+  return `<img class="ruota" src="${esc(t.img)}?v=10210442" alt="Tema natale di ${esc(p.nome)}"><p class="tema-meta">${stato}${link}</p>`;
 }
 
 function apri(id){
@@ -232,7 +224,7 @@ function apri(id){
   $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
     <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
     <table>${righe}</table></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10210013" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10210442" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
@@ -264,8 +256,8 @@ document.addEventListener("click",e=>{  // rotella e tendine si chiudono toccand
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
-fetch("dati.json?v=10210013").then(r=>r.json()).then(dati=>{
-  D=dati;
+Promise.all([fetch("dati.json?v=10210442").then(r=>r.json()),fetch("temi.json?v=10210442").then(r=>r.json())]).then(([dati,temi])=>{
+  D=dati;TEMI=temi||{};
   fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};disegna()}).catch(()=>{});
   try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
   filtriUI();
