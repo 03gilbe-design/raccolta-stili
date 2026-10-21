@@ -94,14 +94,15 @@ body.solo-prima .nastro img:not(:first-child){display:none}
 .g{font-family:"Segoe UI Symbol","Noto Sans Symbols 2","Apple Symbols",var(--testo);font-size:18px;line-height:1}
 dialog{border:none;border-radius:14px;padding:0;max-width:min(980px,96vw);width:100%;background:var(--carta);color:var(--ink)}
 dialog::backdrop{background:rgba(10,8,20,.6)}
-.dett{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:22px;padding:22px}
-@media (max-width:760px){.dett{grid-template-columns:1fr}}
+.dett{display:flex;flex-direction:column;gap:16px;padding:22px}
 .dett h2{font-family:var(--display);font-size:34px;margin:0}
 .dett .meta{color:var(--muto);font-size:13px}
-.ruota{display:block;width:100%;max-width:420px;height:auto}
-.tema-meta{max-width:420px;margin:8px 0 0;color:var(--muto);font-size:13px}
-table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
-td{padding:4px 6px;border-bottom:1px solid var(--linea)}
+.ruota{display:block;width:100%;max-width:700px;height:auto;margin:0 auto}
+.tema-info{width:100%;max-width:700px;margin:0 auto}
+.tema-meta{margin:2px 0 10px;color:var(--muto);font-size:13px}
+.pianeti-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:7px;font-variant-numeric:tabular-nums}
+.pos-pianeta{display:flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:7px 9px;border:1px solid var(--linea);border-radius:8px;font-weight:600}
+.pos-pianeta .g{font-size:21px}
 .galleria{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
 .galleria img{height:300px;width:auto;border-radius:6px;flex:none}
 .chiudi{position:sticky;top:0;float:right;margin:10px;border:1px solid var(--linea);background:var(--carta);color:var(--ink);border-radius:99px;padding:6px 14px;font:500 14px var(--testo);cursor:pointer}
@@ -183,7 +184,7 @@ function scheda(p){
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
   return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10211018" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10211035" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
       <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
@@ -210,21 +211,18 @@ function disegna(){
 function ruota(p){
   const t=TEMI[p.id];
   if(!t)return `<p class="tema-meta">Tema natale non disponibile.</p>`;
-  const stato=t.case?"Case e Ascendente":"Ora di nascita ignota: niente case";
-  const link=t.pagina?` · <a href="${esc(t.pagina)}" target="_blank" rel="noopener">Apri su Astro-Seek</a>`:"";
-  return `<img class="ruota" src="${esc(t.img)}?v=10211018" alt="Tema natale di ${esc(p.nome)}"><p class="tema-meta">${stato}${link}</p>`;
+  return `<img class="ruota" src="${esc(t.img)}?v=10211035" alt="Tema natale di ${esc(p.nome)}">`;
 }
 
 function apri(id){
   const p=D.find(x=>x.id===id);if(!p)return;
-  const righe=PIANETI.map(([n,g,col])=>{const lon=p.pos[n],gr=Math.floor(lon%30),mi=Math.round((lon%1)*60);
-    const inc=n==="Luna"&&p.luna_incerta?` <span class="nota">(${p.luna_incerta.join(" o ")}: ora ignota)</span>`:"";
-    const a=p.asp_venere.filter(x=>GP[x.pianeta][0]===n).map(x=>NOME_ASP[x.asp]).join(", ");
-    return `<tr><td style="color:var(${col});font-weight:600">${n}</td><td>${SEGNI[Math.floor(lon/30)]} ${gr}°${String(mi).padStart(2,"0")}′${inc}</td><td class="nota">${a?"con Venere: "+a:""}</td></tr>`}).join("");
-  $("#dett-corpo").innerHTML=`<div class="dett"><div>${ruota(p)}</div><div style="min-width:0">
-    <h2>${esc(p.nome)}</h2><p class="meta">Nato/a il ${p.data}${p.ora?" alle "+p.ora+" (ora dal dataset)":" · ora di nascita ignota"}</p>
-    <table>${righe}</table></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10211018" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+  const posizioni=PIANETI.map(([n,g,col])=>{const lon=p.pos[n],gr=Math.floor(lon%30),mi=Math.round((lon%1)*60),segno=Math.floor(lon/30);
+    return `<div class="pos-pianeta" style="color:var(${col})" title="${n} in ${SEGNI[segno]}"><span class="g">${g}</span><span class="g">${GS[segno]}</span><span>${gr}°${String(mi).padStart(2,"0")}′</span></div>`}).join("");
+  const ora=p.ora?`Ora nota: ${p.ora}`:`Ora ignota${p.luna_incerta?` · Luna ${p.luna_incerta.join("/")}`:""}`;
+  $("#dett-corpo").innerHTML=`<div class="dett">${ruota(p)}<div class="tema-info">
+    <h2>${esc(p.nome)}</h2><p class="tema-meta">${ora}</p>
+    <div class="pianeti-griglia">${posizioni}</div></div></div>
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10211035" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
