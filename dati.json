@@ -2740,7 +2740,11 @@
    }
   ],
   "foto": [
-   "foto/anthonydelon_0.jpg"
+   "foto/anthonydelon_0.jpg",
+   "foto/anthonydelon_1.jpg",
+   "foto/anthonydelon_2.jpg",
+   "foto/anthonydelon_3.jpg",
+   "foto/anthonydelon_4.jpg"
   ]
  },
  {
@@ -3288,7 +3292,10 @@
   ],
   "foto": [
    "foto/bindiirwin_0.jpg",
-   "foto/bindiirwin_1.jpg"
+   "foto/bindiirwin_1.jpg",
+   "foto/bindiirwin_2.jpg",
+   "foto/bindiirwin_3.jpg",
+   "foto/bindiirwin_4.jpg"
   ]
  },
  {
@@ -3387,7 +3394,9 @@
   "foto": [
    "foto/stphanediagana_0.jpg",
    "foto/stphanediagana_1.jpg",
-   "foto/stphanediagana_2.jpg"
+   "foto/stphanediagana_2.jpg",
+   "foto/stphanediagana_3.jpg",
+   "foto/stphanediagana_4.jpg"
   ]
  },
  {
@@ -3523,7 +3532,12 @@
     "forza": 0.59
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/emmanuellebart_0.jpg",
+   "foto/emmanuellebart_1.jpg",
+   "foto/emmanuellebart_2.jpg",
+   "foto/emmanuellebart_3.jpg"
+  ]
  },
  {
   "nome": "John Wetteland",
@@ -3565,7 +3579,12 @@
     "forza": 0.65
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/johnwetteland_0.jpg",
+   "foto/johnwetteland_1.jpg",
+   "foto/johnwetteland_2.jpg",
+   "foto/johnwetteland_3.jpg"
+  ]
  },
  {
   "nome": "Andrew Garfield",
@@ -3669,7 +3688,12 @@
    "Plutone": "Leone"
   },
   "asp_venere": [],
-  "foto": []
+  "foto": [
+   "foto/patrickswayze_0.jpg",
+   "foto/patrickswayze_1.jpg",
+   "foto/patrickswayze_2.jpg",
+   "foto/patrickswayze_3.jpg"
+  ]
  },
  {
   "nome": "Roger Federer",
@@ -3721,7 +3745,13 @@
     "forza": 0.43
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/rogerfederer_0.jpg",
+   "foto/rogerfederer_1.jpg",
+   "foto/rogerfederer_2.jpg",
+   "foto/rogerfederer_3.jpg",
+   "foto/rogerfederer_4.jpg"
+  ]
  },
  {
   "nome": "Ulrich Tukur",
@@ -3783,7 +3813,13 @@
     "forza": 0.57
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/ulrichtukur_0.jpg",
+   "foto/ulrichtukur_1.jpg",
+   "foto/ulrichtukur_2.jpg",
+   "foto/ulrichtukur_3.jpg",
+   "foto/ulrichtukur_4.jpg"
+  ]
  },
  {
   "nome": "Dave Chappelle",
@@ -3845,7 +3881,13 @@
     "forza": 0.65
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/davechappelle_0.jpg",
+   "foto/davechappelle_1.jpg",
+   "foto/davechappelle_2.jpg",
+   "foto/davechappelle_3.jpg",
+   "foto/davechappelle_4.jpg"
+  ]
  },
  {
   "nome": "Paul Walker",
@@ -3902,7 +3944,12 @@
     "forza": 0.23
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/paulwalker_0.jpg",
+   "foto/paulwalker_1.jpg",
+   "foto/paulwalker_2.jpg",
+   "foto/paulwalker_3.jpg"
+  ]
  },
  {
   "nome": "River Phoenix",
@@ -3944,7 +3991,13 @@
     "forza": 0.07
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/riverphoenix_0.jpg",
+   "foto/riverphoenix_1.jpg",
+   "foto/riverphoenix_2.jpg",
+   "foto/riverphoenix_3.jpg",
+   "foto/riverphoenix_4.jpg"
+  ]
  },
  {
   "nome": "Natalia Estrada",
@@ -3996,7 +4049,13 @@
     "forza": 0.06
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/nataliaestrada_0.jpg",
+   "foto/nataliaestrada_1.jpg",
+   "foto/nataliaestrada_2.jpg",
+   "foto/nataliaestrada_3.jpg",
+   "foto/nataliaestrada_4.jpg"
+  ]
  },
  {
   "nome": "Benoît Poelvoorde",
@@ -4043,7 +4102,13 @@
     "forza": 0.93
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/benotpoelvoorde_0.jpg",
+   "foto/benotpoelvoorde_1.jpg",
+   "foto/benotpoelvoorde_2.jpg",
+   "foto/benotpoelvoorde_3.jpg",
+   "foto/benotpoelvoorde_4.jpg"
+  ]
  },
  {
   "nome": "Mylène Farmer",
@@ -4100,7 +4165,12 @@
     "forza": 0.11
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/mylnefarmer_0.jpg",
+   "foto/mylnefarmer_1.jpg",
+   "foto/mylnefarmer_2.jpg",
+   "foto/mylnefarmer_3.jpg"
+  ]
  },
  {
   "nome": "Asia Argento",
@@ -4157,7 +4227,13 @@
     "forza": 0.15
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/asiaargento_0.jpg",
+   "foto/asiaargento_1.jpg",
+   "foto/asiaargento_2.jpg",
+   "foto/asiaargento_3.jpg",
+   "foto/asiaargento_4.jpg"
+  ]
  },
  {
   "nome": "Corbin Bernsen",
@@ -4219,7 +4295,12 @@
     "forza": 0.04
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/corbinbernsen_0.jpg",
+   "foto/corbinbernsen_1.jpg",
+   "foto/corbinbernsen_2.jpg",
+   "foto/corbinbernsen_3.jpg"
+  ]
  },
  {
   "nome": "Jean-Félix Lalanne",
@@ -4281,7 +4362,13 @@
     "forza": 0.0
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/jeanflixlalanne_0.jpg",
+   "foto/jeanflixlalanne_1.jpg",
+   "foto/jeanflixlalanne_2.jpg",
+   "foto/jeanflixlalanne_3.jpg",
+   "foto/jeanflixlalanne_4.jpg"
+  ]
  },
  {
   "nome": "Joe Perry",
@@ -4328,6 +4415,12 @@
     "forza": 0.91
    }
   ],
-  "foto": []
+  "foto": [
+   "foto/joeperry_0.jpg",
+   "foto/joeperry_1.jpg",
+   "foto/joeperry_2.jpg",
+   "foto/joeperry_3.jpg",
+   "foto/joeperry_4.jpg"
+  ]
  }
 ]
