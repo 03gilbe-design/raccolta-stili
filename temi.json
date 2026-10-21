@@ -1,22 +1,22 @@
 {
  "zendaya": {
   "img": "temi/zendaya.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/zendaya-horoscope"
  },
  "keanureeves": {
   "img": "temi/keanureeves.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/keanu-reeves-horoscope"
  },
  "jackblack": {
   "img": "temi/jackblack.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/jack-black-horoscope"
  },
  "camerondiaz": {
   "img": "temi/camerondiaz.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/cameron-diaz-horoscope"
  },
  "macaulayculkin": {
@@ -26,7 +26,7 @@
  },
  "salmahayek": {
   "img": "temi/salmahayek.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/salma-hayek-horoscope"
  },
  "kaiagerber": {
@@ -41,7 +41,7 @@
  },
  "blakelively": {
   "img": "temi/blakelively.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/blake-lively-horoscope"
  },
  "matildadeangelis": {
@@ -51,12 +51,12 @@
  },
  "pink": {
   "img": "temi/pink.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/pink-horoscope"
  },
  "beyonc": {
   "img": "temi/beyonc.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/beyonce-knowles-horoscope"
  },
  "mahmood": {
@@ -71,12 +71,12 @@
  },
  "nickjonas": {
   "img": "temi/nickjonas.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/nick-jonas-horoscope"
  },
  "elisabettacanalis": {
   "img": "temi/elisabettacanalis.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/elisabetta-canalis-horoscope"
  },
  "alessandroborghi": {
@@ -86,7 +86,7 @@
  },
  "rmbts": {
   "img": "temi/rmbts.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/kim-nam-joon-horoscope"
  },
  "jenniferlopez": {
@@ -96,12 +96,12 @@
  },
  "sandrabullock": {
   "img": "temi/sandrabullock.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/sandra-bullock-horoscope"
  },
  "halleberry": {
   "img": "temi/halleberry.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/halle-berry-horoscope"
  },
  "janniksinner": {
@@ -116,7 +116,7 @@
  },
  "jenniferlawrence": {
   "img": "temi/jenniferlawrence.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/jennifer-lawrence-horoscope"
  },
  "jasonmomoa": {
@@ -131,7 +131,7 @@
  },
  "kyliejenner": {
   "img": "temi/kyliejenner.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/kylie-jenner-horoscope"
  },
  "chrishemsworth": {
@@ -146,12 +146,12 @@
  },
  "charlizetheron": {
   "img": "temi/charlizetheron.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/charlize-theron-horoscope"
  },
  "malcolmjamalwarner": {
   "img": "temi/malcolmjamalwarner.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/malcolm-jamal-warner-horoscope"
  },
  "usainbolt": {
@@ -161,42 +161,42 @@
  },
  "monicabellucci": {
   "img": "temi/monicabellucci.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/monica-bellucci-horoscope"
  },
  "gwynethpaltrow": {
   "img": "temi/gwynethpaltrow.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/gwyneth-paltrow-horoscope"
  },
  "bellahadid": {
   "img": "temi/bellahadid.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/bella-hadid-horoscope"
  },
  "kimkardashian": {
   "img": "temi/kimkardashian.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/kim-kardashian-horoscope"
  },
  "gwenstefani": {
   "img": "temi/gwenstefani.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/gwen-stefani-horoscope"
  },
  "willsmith": {
   "img": "temi/willsmith.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/will-smith-horoscope"
  },
  "hilaryduff": {
   "img": "temi/hilaryduff.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/hilary-duff-horoscope"
  },
  "zacefron": {
   "img": "temi/zacefron.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/zac-efron-horoscope"
  },
  "cardib": {
@@ -206,7 +206,7 @@
  },
  "hughjackman": {
   "img": "temi/hughjackman.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/hugh-jackman-horoscope"
  },
  "fedez": {
@@ -216,38 +216,38 @@
  },
  "valeriagolino": {
   "img": "temi/valeriagolino.png",
-  "case": false,
+  "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/valeria-golino-horoscope"
  },
  "christopherreeve": {
   "img": "temi/christopherreeve.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/christopher-reeve-horoscope"
  },
  "michaelballack": {
   "img": "temi/michaelballack.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/michael-ballack-horoscope"
  },
  "jasonalexander": {
   "img": "temi/jasonalexander.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/jason-alexander-horoscope"
  },
  "anthonydelon": {
   "img": "temi/anthonydelon.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/anthony-delon-horoscope"
  },
  "seanpatrickflanery": {
   "img": "temi/seanpatrickflanery.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/sean-patrick-flanery-horoscope"
  },
  "lucacarboni": {
   "img": "temi/lucacarboni.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/luca-carboni-horoscope"
  },
  "jimin": {
   "img": "temi/jimin.png",
@@ -256,18 +256,18 @@
  },
  "serenawilliams": {
   "img": "temi/serenawilliams.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/serena-williams-horoscope"
  },
  "scottymccreery": {
   "img": "temi/scottymccreery.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/scotty-mccreery-horoscope"
  },
  "catherinezetajones": {
   "img": "temi/catherinezetajones.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/catherine-zeta-jones-horoscope"
  },
  "tchkykaryo": {
   "img": "temi/tchkykaryo.png",
@@ -276,23 +276,23 @@
  },
  "gabrielesalvatores": {
   "img": "temi/gabrielesalvatores.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/gabriele-salvatores-horoscope"
  },
  "gerihalliwell": {
   "img": "temi/gerihalliwell.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/geri-halliwell-horoscope"
  },
  "bindiirwin": {
   "img": "temi/bindiirwin.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/bindi-irwin-horoscope"
  },
  "barrybonds": {
   "img": "temi/barrybonds.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/barry-bonds-horoscope"
  },
  "stphanediagana": {
   "img": "temi/stphanediagana.png",
@@ -301,8 +301,8 @@
  },
  "whitneyhouston": {
   "img": "temi/whitneyhouston.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/whitney-houston-horoscope"
  },
  "emmanuellebart": {
   "img": "temi/emmanuellebart.png",
@@ -311,48 +311,48 @@
  },
  "johnwetteland": {
   "img": "temi/johnwetteland.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/john-wetteland-horoscope"
  },
  "andrewgarfield": {
   "img": "temi/andrewgarfield.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/andrew-garfield-horoscope"
  },
  "patrickswayze": {
   "img": "temi/patrickswayze.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/patrick-swayze-horoscope"
  },
  "rogerfederer": {
   "img": "temi/rogerfederer.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/roger-federer-horoscope"
  },
  "ulrichtukur": {
   "img": "temi/ulrichtukur.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/ulrich-tukur-horoscope"
  },
  "davechappelle": {
   "img": "temi/davechappelle.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/dave-chappelle-horoscope"
  },
  "paulwalker": {
   "img": "temi/paulwalker.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/paul-walker-horoscope"
  },
  "riverphoenix": {
   "img": "temi/riverphoenix.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/river-phoenix-horoscope"
  },
  "nataliaestrada": {
   "img": "temi/nataliaestrada.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/natalia-estrada-horoscope"
  },
  "benotpoelvoorde": {
   "img": "temi/benotpoelvoorde.png",
@@ -366,13 +366,13 @@
  },
  "asiaargento": {
   "img": "temi/asiaargento.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/asia-argento-horoscope"
  },
  "corbinbernsen": {
   "img": "temi/corbinbernsen.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/corbin-bernsen-horoscope"
  },
  "jeanflixlalanne": {
   "img": "temi/jeanflixlalanne.png",
@@ -381,7 +381,7 @@
  },
  "joeperry": {
   "img": "temi/joeperry.png",
-  "case": false,
-  "pagina": null
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/joe-perry-horoscope"
  }
 }
