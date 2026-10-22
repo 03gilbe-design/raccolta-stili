@@ -1,101 +1,227 @@
 {
-  "_istruzioni": "id personaggio (come in dati.json) -> lista di {tema, nota, fonte}. Solo cose dichiarate dalla persona o documentate da fonti serie, sempre con link alla fonte.",
-  "danielradcliffe": [
+  "_istruzioni": "id personaggio (come in dati.json) -> lista di {tema, anno, contesto, fonte}. Solo fatti dichiarati dalla persona o documentati da fonti serie; niente supposizioni.",
+  "zendaya": [
     {
-      "tema": "alcol",
-      "nota": "Usò l'alcol per affrontare fama e paura del fallimento.",
-      "fonte": "https://www.theguardian.com/film/2014/jun/16/daniel-radcliffe-alcohol-harry-potter"
+      "tema": "ansia",
+      "anno": "2024",
+      "contesto": "Ha raccontato di isolarsi quando non lavora e di faticare anche ad alzarsi dal letto. Terapia, persone vicine e movimento la aiutano a gestire l'ansia.",
+      "fonte": "https://www.vogue.com/article/zendaya-on-shoes-partnership"
     }
   ],
-  "caradelevingne": [
+  "keanureeves": [
     {
-      "tema": "dipendenza",
-      "nota": "Ha raccontato depressione, dipendenza e percorso verso la sobrietà.",
-      "fonte": "https://www.vogue.com/article/cara-delevingne-april-cover-2023-interview"
+      "tema": "lutto",
+      "anno": "1999-2001",
+      "contesto": "A metà dei trent'anni perse una figlia nata morta e, due anni dopo, l'ex compagna Jennifer Syme. Ha spiegato che scrivere poesia lo ha aiutato a dare forma al dolore.",
+      "fonte": "https://www.theguardian.com/film/2021/dec/19/i-want-to-get-as-much-done-as-i-can-keanu-reeves-on-poetry-and-grief"
     }
   ],
-  "catherinezetajones": [
+  "jackblack": [
     {
-      "tema": "bipolarismo",
-      "nota": "Ha ricevuto cure ospedaliere per disturbo bipolare II.",
-      "fonte": "https://www.theguardian.com/film/2011/apr/14/catherine-zeta-jones-bipolar-courage"
-    }
-  ],
-  "gwynethpaltrow": [
-    {
-      "tema": "depressione post-partum",
-      "nota": "Ha riferito depressione postnatale dopo la nascita del figlio Moses.",
-      "fonte": "https://www.theguardian.com/theobserver/2011/apr/24/observer-profile-gwyneth-paltrow-coldplay"
-    }
-  ],
-  "serenawilliams": [
-    {
-      "tema": "post-partum",
-      "nota": "Ha raccontato tristezza, crolli emotivi e sintomi persistenti dopo il parto.",
-      "fonte": "https://time.com/5368858/serena-williams-comeback/"
+      "tema": "dipendenze",
+      "anno": "adolescenza",
+      "contesto": "Ha raccontato un'adolescenza spericolata segnata da droghe e furti in famiglia. Da adulto considera quel periodo pericoloso e si ritiene fortunato a essere sopravvissuto.",
+      "fonte": "https://www.theguardian.com/lifeandstyle/2011/may/14/jack-black-my-family-values"
     }
   ],
   "pink": [
     {
       "tema": "overdose",
-      "nota": "A sedici anni rischiò la morte per un'overdose di droghe.",
+      "anno": "1995",
+      "contesto": "A sedici anni ebbe un'overdose durante un rave. Dopo quell'episodio smise di usare droghe pesanti e poche settimane dopo ottenne la prima opportunità musicale.",
       "fonte": "https://abc7chicago.com/post/singer-pink-overdose-interview-on-60-minutes-overtime/13963107/"
+    }
+  ],
+  "tomhardy": [
+    {
+      "tema": "dipendenze",
+      "anno": "2003",
+      "contesto": "Dopo anni di dipendenza da alcol e crack, un collasso seguito a un'abbuffata di crack lo portò in riabilitazione. Nel 2015 dichiarava di essere sobrio dal 2003.",
+      "fonte": "https://www.theguardian.com/film/2015/may/12/tom-hardy-mum-crack-addictions-alcohol-mad-max-fury-road"
+    },
+    {
+      "tema": "alcol",
+      "anno": "2003",
+      "contesto": "Ha collegato l'inizio del bere alla ricerca di calma già a tredici anni. Dopo la crisi del 2003 entrò in recupero e rimase sobrio.",
+      "fonte": "https://www.theguardian.com/film/2010/jul/04/tom-hardy-actor-film-inception"
+    }
+  ],
+  "jenniferlawrence": [
+    {
+      "tema": "ansia",
+      "anno": "adolescenza",
+      "contesto": "Ha descritto un'infanzia infelice e una forte ansia sociale a scuola. I genitori le trovarono una terapeuta.",
+      "fonte": "https://www.vogue.com/article/star-quality-jennifer-lawrence-hunger-games"
+    }
+  ],
+  "danielradcliffe": [
+    {
+      "tema": "alcol",
+      "anno": "2010",
+      "contesto": "Durante gli ultimi anni di Harry Potter usò l'alcol per affrontare fama e paura del fallimento. Smise di bere nel 2010 e parlò pubblicamente del recupero.",
+      "fonte": "https://www.theguardian.com/film/2014/jun/16/daniel-radcliffe-alcohol-harry-potter"
+    }
+  ],
+  "caradelevingne": [
+    {
+      "tema": "depressione",
+      "anno": "2013",
+      "contesto": "Ha raccontato depressione e autolesionismo iniziati nell'adolescenza, quando venne curata e si allontanò temporaneamente dalla scuola.",
+      "fonte": "https://www.vogue.com/article/cara-delevingne-april-cover-2023-interview"
+    },
+    {
+      "tema": "dipendenze",
+      "anno": "2022",
+      "contesto": "Dopo una crisi resa pubblica da fotografie all'aeroporto, entrò in riabilitazione e seguì un programma in dodici passi. Nel 2023 raccontava il percorso di sobrietà.",
+      "fonte": "https://www.vogue.com/article/cara-delevingne-april-cover-2023-interview"
+    }
+  ],
+  "charlizetheron": [
+    {
+      "tema": "trauma",
+      "anno": "1991",
+      "contesto": "A quindici anni assistette all'attacco del padre alcolista contro lei e la madre, che lo uccise per legittima difesa. Theron ha raccontato direttamente l'episodio.",
+      "fonte": "https://www.theguardian.com/film/2019/dec/17/charlize-theron-details-sexual-harassment-by-famous-director-bombshell-film"
+    }
+  ],
+  "gwynethpaltrow": [
+    {
+      "tema": "depressione post-partum",
+      "anno": "2006",
+      "contesto": "Dopo la nascita del figlio Moses attraversò una depressione postnatale. Riconobbe la condizione con l'aiuto dell'allora marito e ne parlò pubblicamente anni dopo.",
+      "fonte": "https://www.theguardian.com/theobserver/2011/apr/24/observer-profile-gwyneth-paltrow-coldplay"
     }
   ],
   "bellahadid": [
     {
       "tema": "depressione",
-      "nota": "Ha descritto depressione, ansia e problemi alimentari presenti dall'adolescenza.",
+      "anno": "adolescenza",
+      "contesto": "Ha descritto depressione e ansia presenti dall'adolescenza, aggravate dalla pressione del lavoro. Ha seguito terapia e periodi di cura.",
       "fonte": "https://www.vogue.com/article/bella-hadid-cover-april-2022"
-    }
-  ],
-  "whitneyhouston": [
+    },
     {
-      "tema": "dipendenza",
-      "nota": "Ammise uso di droghe e descrisse un matrimonio emotivamente abusivo.",
-      "fonte": "https://www.theguardian.com/theobserver/2009/sep/20/whitney-houston-observer-profile"
-    }
-  ],
-  "joeperry": [
-    {
-      "tema": "droghe",
-      "nota": "Nel memoir ha raccontato apertamente il proprio abuso di droghe.",
-      "fonte": "https://www.guitarworld.com/features/rocks-aerosmith-guitarist-joe-perry-talks-new-memoir-guitars-and-next"
-    }
-  ],
-  "shawnmendes": [
-    {
-      "tema": "ansia",
-      "nota": "L'ansia divenne così forte da impedirgli temporaneamente di cantare.",
-      "fonte": "https://www.theguardian.com/music/2020/dec/09/shawn-mendes-the-fear-strangled-me-i-really-fell-down"
-    }
-  ],
-  "fedez": [
-    {
-      "tema": "depressione",
-      "nota": "Dopo la malattia ha attraversato una depressione acuta.",
-      "fonte": "https://www.corriere.it/cronache/23_ottobre_07/fedez-intervista-35a88430-6478-11ee-b6dc-e5be88e81c69_amp.html"
-    }
-  ],
-  "gerihalliwell": [
-    {
-      "tema": "bulimia",
-      "nota": "Ha documentato nelle autobiografie il proprio disturbo alimentare.",
-      "fonte": "https://www.theguardian.com/books/2007/apr/15/features.review4"
-    }
-  ],
-  "andrewgarfield": [
-    {
-      "tema": "lutto",
-      "nota": "La morte della madre gli causò un dolore profondo e paralizzante.",
-      "fonte": "https://www.theguardian.com/film/2022/feb/19/andrew-garfield-reveals-precise-agony-of-losing-his-mother-to-cancer"
+      "tema": "disturbi alimentari",
+      "anno": "adolescenza",
+      "contesto": "Da adolescente sviluppò anoressia dopo una prescrizione errata di Adderall e il conteggio ossessivo delle calorie. Ha raccontato che il rapporto col cibo richiede ancora attenzione.",
+      "fonte": "https://www.vogue.com/article/bella-hadid-cover-april-2022"
     }
   ],
   "kimkardashian": [
     {
       "tema": "trauma",
-      "nota": "La rapina armata di Parigi le causò paura e trauma duraturi.",
-      "fonte": "https://apnews.com/article/kim-kardashian-trial-paris-fashion-week-b06a96edfa5271de2d92870dcafe2796"
+      "anno": "2016",
+      "contesto": "Durante la rapina armata di Parigi fu legata e minacciata con una pistola. In seguito ha descritto paura persistente e cambiamenti nel proprio rapporto con sicurezza e beni materiali.",
+      "fonte": "https://www.theguardian.com/us-news/2025/may/13/kim-kardashian-pleaded-for-her-life-during-paris-robbery-her-stylist-tells-court"
+    }
+  ],
+  "cardib": [
+    {
+      "tema": "depressione post-partum",
+      "anno": "2018",
+      "contesto": "Dopo la nascita della figlia Kulture la depressione post-partum arrivò in modo inatteso e rese il mondo opprimente. Parlò anche della debolezza fisica e rinunciò temporaneamente al tour.",
+      "fonte": "https://www.vogue.com/article/cardi-b-instagram-pregnancy-motherhood-daughter-kulture"
+    }
+  ],
+  "hughjackman": [
+    {
+      "tema": "lutto",
+      "anno": "2021",
+      "contesto": "Perse il padre durante la preparazione del film The Son. Continuare il lavoro lo aiutò a elaborare il lutto, mentre il ruolo fece riemergere questioni familiari.",
+      "fonte": "https://www.theguardian.com/film/2023/jan/05/hugh-jackman-wolverine-father-the-son-x-men"
+    },
+    {
+      "tema": "terapia",
+      "anno": "2022",
+      "contesto": "Durante le riprese di The Son soffrì insonnia e forte stress emotivo. Iniziò allora un percorso di terapia, che descrisse come utile per comprendere meglio la propria storia familiare.",
+      "fonte": "https://www.theguardian.com/film/2023/jan/05/hugh-jackman-wolverine-father-the-son-x-men"
+    }
+  ],
+  "fedez": [
+    {
+      "tema": "depressione",
+      "anno": "2023",
+      "contesto": "Dopo il tumore e la sospensione improvvisa di psicofarmaci attraversò una depressione acuta con forti sintomi fisici. Ha raccontato di avere poi ripreso un percorso terapeutico.",
+      "fonte": "https://www.corriere.it/cronache/23_ottobre_07/fedez-intervista-35a88430-6478-11ee-b6dc-e5be88e81c69_amp.html"
+    }
+  ],
+  "christopherreeve": [
+    {
+      "tema": "ideazione suicidaria",
+      "anno": "1995",
+      "contesto": "Subito dopo l'incidente che lo paralizzò dal collo in giù chiese alla moglie di lasciarlo morire. Il suo sostegno lo convinse a vivere; seguì riabilitazione e divenne attivista per la ricerca.",
+      "fonte": "https://www.theguardian.com/film/2024/oct/17/christopher-reeves-kids-on-love-loss-and-his-life-changing-accident-he-celebrated-every-single-thing-we-did"
+    }
+  ],
+  "michaelballack": [
+    {
+      "tema": "lutto",
+      "anno": "2021",
+      "contesto": "Il figlio Emilio, diciottenne, morì in un incidente con un quad vicino alla casa di famiglia in Portogallo. La notizia e il sostegno ricevuto dalla famiglia sono documentati da fonti giornalistiche.",
+      "fonte": "https://www.theguardian.com/football/2021/aug/05/son-of-german-football-star-michael-ballack-dies-in-quad-bike-crash"
+    }
+  ],
+  "serenawilliams": [
+    {
+      "tema": "depressione post-partum",
+      "anno": "2017-2018",
+      "contesto": "Dopo il parto difficile e il ritorno alle gare raccontò crisi emotive e la sensazione di non essere una buona madre. Parlare con familiari e amici la aiutò a non sentirsi sola.",
+      "fonte": "https://www.theguardian.com/sport/2018/aug/06/serena-williams-motherhood-tennis-post-partum"
+    }
+  ],
+  "catherinezetajones": [
+    {
+      "tema": "bipolarismo",
+      "anno": "2011",
+      "contesto": "Dopo lo stress legato alla malattia del marito ricevette cure ospedaliere per disturbo bipolare II. Rese pubblica la diagnosi per ridurre lo stigma.",
+      "fonte": "https://www.theguardian.com/film/2011/apr/14/catherine-zeta-jones-bipolar-courage"
+    }
+  ],
+  "gerihalliwell": [
+    {
+      "tema": "disturbi alimentari",
+      "anno": "anni 1990",
+      "contesto": "Ha documentato nelle autobiografie la bulimia vissuta prima e durante la fama con le Spice Girls. In seguito ha descritto il recupero e un rapporto più stabile col corpo.",
+      "fonte": "https://www.theguardian.com/books/2007/apr/15/features.review4"
+    }
+  ],
+  "bindiirwin": [
+    {
+      "tema": "lutto",
+      "anno": "2006",
+      "contesto": "Aveva otto anni quando il padre Steve Irwin morì improvvisamente. Tornò presto alle attività pubbliche della famiglia mentre affrontava il lutto con il sostegno dei familiari.",
+      "fonte": "https://www.theguardian.com/media/2006/oct/26/australia.broadcasting"
+    }
+  ],
+  "whitneyhouston": [
+    {
+      "tema": "dipendenze",
+      "anno": "anni 1990-2000",
+      "contesto": "Ammise pubblicamente l'uso di cocaina e altre droghe durante il matrimonio e diversi tentativi di riabilitazione. Nel 2009 raccontava di essere tornata sobria e alla musica.",
+      "fonte": "https://www.theguardian.com/theobserver/2009/sep/20/whitney-houston-observer-profile"
+    }
+  ],
+  "andrewgarfield": [
+    {
+      "tema": "lutto",
+      "anno": "2019",
+      "contesto": "La morte della madre per cancro gli causò un dolore profondo. Ha spiegato di avere trasformato quel dolore nel lavoro e di considerarlo una forma duratura d'amore.",
+      "fonte": "https://www.theguardian.com/film/2022/feb/19/andrew-garfield-reveals-precise-agony-of-losing-his-mother-to-cancer"
+    }
+  ],
+  "riverphoenix": [
+    {
+      "tema": "overdose",
+      "anno": "1993",
+      "contesto": "Morì a ventitré anni per un'overdose accidentale di cocaina ed eroina fuori dal Viper Room. Testimonianze successive descrissero l'uso di droghe nei giorni precedenti.",
+      "fonte": "https://www.theguardian.com/film/2018/oct/25/the-untold-story-of-lost-star-river-phoenix-25-years-after-his-death"
+    }
+  ],
+  "joeperry": [
+    {
+      "tema": "dipendenze",
+      "anno": "anni 1970-1980",
+      "contesto": "Nel memoir ha raccontato apertamente l'abuso di droghe negli anni di massimo successo degli Aerosmith. Ha poi descritto il recupero e il ritorno stabile nella band.",
+      "fonte": "https://www.guitarworld.com/features/rocks-aerosmith-guitarist-joe-perry-talks-new-memoir-guitars-and-next"
     }
   ]
 }

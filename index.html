@@ -68,9 +68,15 @@ header p{color:var(--muto);max-width:62ch;margin:10px 0 0}
 .mostra{position:absolute;z-index:5;top:calc(100% + 6px);left:0;width:max-content;max-width:min(320px,80vw);border:1px solid var(--linea);border-radius:8px;background:var(--carta);margin:0;padding:12px 14px;display:flex;flex-direction:column;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
 .mostra legend{float:left;margin-bottom:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .filtri .mostra label{flex-direction:row;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink)}
-body.no-pianeti .tocchi,body.no-segni .posizioni,body.no-diff .diff{display:none}
+body.no-pianeti .tocchi,body.no-segni .posizioni{display:none}
 .diff{display:flex;flex-wrap:wrap;gap:4px}
 .diff a{font-size:12px;border-radius:99px;padding:2px 9px;background:var(--accento-tenue);color:var(--ink);text-decoration:none}
+.diff-lista{display:flex;flex-direction:column;gap:10px}
+.diff-voce{padding-bottom:10px;border-bottom:1px solid var(--linea)}
+.diff-voce:last-child{padding-bottom:0;border-bottom:0}
+.diff-voce a{font-weight:600;color:var(--accento);text-decoration:none}
+.diff-voce p{font-size:13px;color:var(--muto);margin:3px 0 0}
+.anno{font-variant-numeric:tabular-nums;color:var(--ink)}
 body.solo-prima .nastro img:not(:first-child){display:none}
 .conteggio{margin-left:auto;color:var(--muto);font-variant-numeric:tabular-nums}
 .gruppo{margin-top:34px}
@@ -78,8 +84,21 @@ body.solo-prima .nastro img:not(:first-child){display:none}
 .gruppo h2 .glifo{font-style:normal;color:var(--accento)}
 .gruppo h2 small{font:500 12px var(--testo);letter-spacing:.12em;text-transform:uppercase;color:var(--muto)}
 .schede{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
-.scheda{background:var(--carta);border:1px solid var(--linea);border-radius:10px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;min-width:0;text-align:left;padding:0;color:inherit;font:inherit}
+.scheda{background:var(--carta);border:1px solid var(--linea);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;min-width:0;color:inherit;position:relative}
 .scheda:hover{border-color:var(--accento)}
+.pagine{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;touch-action:pan-x pan-y;cursor:grab}
+.pagine::-webkit-scrollbar{display:none}
+.pagine.trascina{cursor:grabbing;scroll-snap-type:none}
+.faccia{flex:0 0 100%;min-width:0;scroll-snap-align:start;display:flex;flex-direction:column}
+.retro{padding:18px 18px 22px;gap:16px;min-height:300px;background:linear-gradient(145deg,var(--carta),var(--accento-tenue))}
+.retro h3,.fronte h3{font-family:var(--display);font-weight:700;font-size:21px;margin:0;line-height:1.15}
+.luna-retro{display:flex;align-items:center;gap:10px;font-size:16px}
+.luna-retro .g{font-size:30px;color:var(--luna)}
+.nav-scheda{display:flex;align-items:center;justify-content:center;gap:8px;padding:7px;background:var(--carta)}
+.nav-scheda button{border:0;background:transparent;color:var(--muto);cursor:pointer;padding:2px 8px;font-size:17px;line-height:1}
+.punti{display:flex;gap:6px}
+.punto{width:7px;height:7px;border-radius:50%;background:var(--linea)}
+.punto.attivo{background:var(--accento)}
 /* tutte le foto visibili insieme: vanno a capo invece di scorrere di lato */
 .nastro{display:flex;flex-wrap:wrap;gap:4px;background:var(--bg);padding:6px}
 .nastro img{height:200px;width:auto;max-width:100%;border-radius:4px;object-fit:contain;flex:none}  /* mai ritagliare: le facce restano intere */
@@ -121,12 +140,14 @@ dialog::backdrop{background:rgba(10,8,20,.6)}
     <div class="campo"><span class="flab">Sole</span><div class="tendina" id="f-sole" data-chiave="sole"></div></div>
     <div class="campo"><span class="flab">Venere</span><div class="tendina" id="f-venere" data-chiave="ven"></div></div>
     <div class="campo"><span class="flab">Dividi per</span><div class="tendina" id="f-dividi" data-chiave="div"></div></div>
+    <label>Mostra solo chi ha avuto:
+      <select id="f-difficolta"><option value="*">Nessun filtro</option></select>
+    </label>
     <details class="ingranaggio"><summary aria-label="Impostazioni">⚙</summary>
       <fieldset class="mostra"><legend>Mostra</legend>
         <label><input type="checkbox" id="m-pianeti" checked> Pianeti che toccano Venere</label>
         <label><input type="checkbox" id="m-segni"> Segni (Sole, Venere, Luna, Marte)</label>
         <label><input type="checkbox" id="m-foto" checked> Tutte le foto</label>
-        <label><input type="checkbox" id="m-diff"> Difficoltà (dichiarate, con fonte)</label>
       </fieldset>
     </details>
     <span class="conteggio" id="conteggio"></span>
@@ -148,7 +169,7 @@ const $=s=>document.querySelector(s);
 let D=[], DIFF={}, TEMI={};  // indici opzionali per difficolta e ruote Astro-Seek
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-const S={sole:"Vergine",ven:"Cancro",div:"Luna"};  // filtri scelti
+const S={sole:"Vergine",ven:"Cancro",div:"Luna",diff:"*"};  // filtri scelti
 
 // tendina fatta a mano (non quella grigia del sistema): bottone + lista; con 0 personaggi la voce e' spenta
 function pillole(el,valori,scelto){
@@ -175,27 +196,32 @@ function filtriUI(){
   // solo pianeti veloci: quelli lenti (Giove..Plutone) sono uguali per chi e' nato nello stesso periodo
   if(!["-","Luna","Mercurio","Marte"].includes(S.div))S.div="Luna";
   pillole($("#f-dividi"),[["-","Non dividere",null],["Luna","Luna",null],["Mercurio","Mercurio",null],["Marte","Marte",null]],S.div);
+  const temi=[...new Set(Object.values(DIFF).flat().map(x=>x.tema))].sort((a,b)=>a.localeCompare(b,"it"));
+  if(S.diff!=="*"&&!temi.includes(S.diff))S.diff="*";
+  $("#f-difficolta").innerHTML=`<option value="*">Nessun filtro</option>${temi.map(t=>`<option value="${esc(t)}"${t===S.diff?' selected':""}>${esc(t)}</option>`).join("")}`;
 }
 
 function segnoDi(p,pianeta){return pianeta==="Luna"?p.luna:p.segni[pianeta]}
 
 function scheda(p){
-  const luna=p.luna_incerta?`<span class="chip incerta" title="Ora di nascita ignota: in quel giorno la Luna cambia segno">Luna ${p.luna_incerta.join("/")}</span>`:`<span class="chip">Luna <b>${p.luna}</b></span>`;
+  const luna=p.luna_incerta?`<span><b>${p.luna_incerta.join(" / ")}</b> <small>(incerta: ora ignota)</small></span>`:`<span><b>${p.luna}</b></span>`;
+  const glifoLuna=p.luna_incerta?p.luna_incerta.map(x=>GS[SEGNI.indexOf(x)]).join("/"):GS[SEGNI.indexOf(p.luna)];
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
-  return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10221519" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
-    <div class="corpo"><h3>${esc(p.nome)}</h3>
-      <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
-      <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
-      ${(DIFF[p.id]||[]).length?`<div class="diff">${DIFF[p.id].map(x=>`<a href="${esc(x.fonte)}" target="_blank" rel="noopener" title="${esc(x.nota||"")}">${esc(x.tema)}</a>`).join("")}</div>`:""}</div></button>`;
+  const difficolta=(DIFF[p.id]||[]).map(x=>`<div class="diff-voce"><a href="${esc(x.fonte)}" target="_blank" rel="noopener">${esc(x.tema)}${x.anno?` Â· <span class="anno">${esc(x.anno)}</span>`:""}</a><p>${esc(x.contesto||x.nota||"")}</p></div>`).join("");
+  return `<article class="scheda" data-id="${p.id}"><div class="pagine" tabindex="0" aria-label="Scheda di ${esc(p.nome)}: scorri per il retro">
+    <section class="faccia fronte"><div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10222200" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+      <div class="corpo"><h3>${esc(p.nome)}</h3><div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div></div></section>
+    <section class="faccia retro"><h3>${esc(p.nome)}</h3><div class="luna-retro"><span class="g">${glifoLuna}</span><span>Luna in ${luna}</span></div>
+      ${difficolta?`<div class="diff-lista">${difficolta}</div>`:`<p class="nota">Nessuna difficoltÃ  pubblica documentata nelle fonti verificate.</p>`}</section></div>
+    <div class="nav-scheda"><button type="button" class="pagina-prev" aria-label="Pagina precedente">â€¹</button><span class="punti" aria-hidden="true"><i class="punto attivo"></i><i class="punto"></i></span><button type="button" class="pagina-next" aria-label="Pagina successiva">â€º</button></div></article>`;
 }
 
 function disegna(){
   const {sole,ven,div}=S;
-  const lista=D.filter(p=>(sole==="*"||p.sole===sole)&&(ven==="*"||p.venere===ven));
+  const lista=D.filter(p=>(sole==="*"||p.sole===sole)&&(ven==="*"||p.venere===ven)&&(S.diff==="*"||(DIFF[p.id]||[]).some(x=>x.tema===S.diff)));
   $("#conteggio").textContent=`${lista.length} personaggi`;
-  try{localStorage.setItem("venere-filtri",JSON.stringify({sole,ven,div}))}catch(e){}
+  try{localStorage.setItem("venere-filtri",JSON.stringify({sole,ven,div,diff:S.diff}))}catch(e){}
   if(!lista.length){$("#gruppi").innerHTML=`<p class="vuoto">Nessun personaggio con questa combinazione. Prova "Tutti" su Sole o Venere.</p>`;return}
   const gruppi=new Map();
   for(const p of lista){
@@ -211,7 +237,7 @@ function disegna(){
 function ruota(p){
   const t=TEMI[p.id];
   if(!t)return `<p class="tema-meta">Tema natale non disponibile.</p>`;
-  return `<img class="ruota" src="${esc(t.img)}?v=10221519" alt="Tema natale di ${esc(p.nome)}">`;
+  return `<img class="ruota" src="${esc(t.img)}?v=10222200" alt="Tema natale di ${esc(p.nome)}">`;
 }
 
 function apri(id){
@@ -222,25 +248,35 @@ function apri(id){
   $("#dett-corpo").innerHTML=`<div class="dett">${ruota(p)}<div class="tema-info">
     <h2>${esc(p.nome)}</h2><p class="tema-meta">${ora}</p>
     <div class="pianeti-griglia">${posizioni}</div></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10221519" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10222200" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
 $("#chiudi").addEventListener("click",()=>$("#dettaglio").close());
 $("#dettaglio").addEventListener("click",e=>{if(e.target.id==="dettaglio")$("#dettaglio").close()});
-$("#gruppi").addEventListener("click",e=>{const b=e.target.closest(".scheda");if(b)apri(b.dataset.id)});
+function vaiPagina(scheda,n){const pagine=scheda.querySelector(".pagine");pagine.scrollTo({left:n*pagine.clientWidth,behavior:"smooth"})}
+$("#gruppi").addEventListener("click",e=>{
+  const s=e.target.closest(".scheda");if(!s)return;
+  if(e.target.closest("a"))return;
+  if(e.target.closest(".pagina-prev"))return vaiPagina(s,0);
+  if(e.target.closest(".pagina-next"))return vaiPagina(s,1);
+  if(!s.dataset.trascinata)apri(s.dataset.id);
+});
+$("#gruppi").addEventListener("scroll",e=>{const p=e.target.closest&&e.target.closest(".pagine");if(!p)return;const n=Math.round(p.scrollLeft/p.clientWidth);p.closest(".scheda").querySelectorAll(".punto").forEach((x,i)=>x.classList.toggle("attivo",i===n))},true);
+$("#gruppi").addEventListener("pointerdown",e=>{const p=e.target.closest(".pagine");if(!p||e.pointerType==="touch")return;const s=p.closest(".scheda");s.dataset.x=e.clientX;s.dataset.sx=p.scrollLeft;s.dataset.trascinata="";p.classList.add("trascina");p.setPointerCapture(e.pointerId)});
+$("#gruppi").addEventListener("pointermove",e=>{const p=e.target.closest(".pagine.trascina");if(!p)return;const s=p.closest(".scheda"),dx=e.clientX-Number(s.dataset.x);if(Math.abs(dx)>5)s.dataset.trascinata="1";p.scrollLeft=Number(s.dataset.sx)-dx});
+$("#gruppi").addEventListener("pointerup",e=>{const p=e.target.closest(".pagine.trascina");if(!p)return;const s=p.closest(".scheda"),n=Math.round(p.scrollLeft/p.clientWidth);p.classList.remove("trascina");vaiPagina(s,n);setTimeout(()=>delete s.dataset.trascinata,0)});
 function mostra(){  // cosa far vedere nelle schede: lo sceglie chi guarda
   document.body.classList.toggle("no-pianeti",!$("#m-pianeti").checked);
   document.body.classList.toggle("no-segni",!$("#m-segni").checked);
   document.body.classList.toggle("solo-prima",!$("#m-foto").checked);
-  document.body.classList.toggle("no-diff",!$("#m-diff").checked);
-  try{localStorage.setItem("venere-mostra",JSON.stringify(["m-pianeti","m-segni","m-foto","m-diff"].map(id=>$("#"+id).checked)))}catch(e){}
+  try{localStorage.setItem("venere-mostra",JSON.stringify(["m-pianeti","m-segni","m-foto"].map(id=>$("#"+id).checked)))}catch(e){}
 }
-try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto","m-diff"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
+try{const m=JSON.parse(localStorage.getItem("venere-mostra")||"null");if(m)["m-pianeti","m-segni","m-foto"].forEach((id,i)=>$("#"+id).checked=m[i])}catch(e){}
 mostra();
 $("#filtri").addEventListener("change",e=>{
   if(e.target.type==="checkbox")return mostra();
-  S[e.target.dataset.chiave]=e.target.value;
+  if(e.target.id==="f-difficolta")S.diff=e.target.value;else S[e.target.dataset.chiave]=e.target.value;
   filtriUI();disegna();
 });
 $("#filtri").addEventListener("submit",e=>e.preventDefault());
@@ -254,9 +290,9 @@ document.addEventListener("click",e=>{  // rotella e tendine si chiudono toccand
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
-Promise.all([fetch("dati.json?v=10221519").then(r=>r.json()),fetch("temi.json?v=10221519").then(r=>r.json())]).then(([dati,temi])=>{
+Promise.all([fetch("dati.json?v=10222200").then(r=>r.json()),fetch("temi.json?v=10222200").then(r=>r.json())]).then(([dati,temi])=>{
   D=dati;TEMI=temi||{};
-  fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};disegna()}).catch(()=>{});
+  fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};filtriUI();disegna()}).catch(()=>{});
   try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}
   filtriUI();
   disegna();
