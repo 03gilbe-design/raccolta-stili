@@ -184,7 +184,7 @@ function scheda(p){
   const tocchi=[...new Map(p.asp_venere.map(a=>[a.pianeta,a])).values()].sort((a,b)=>b.forza-a.forza)
     .map(a=>`<span class="g" style="color:var(${GP[a.pianeta][2]});font-size:${15+a.forza*11}px" title="Venere ${NOME_ASP[a.asp]} ${GP[a.pianeta][0]}">${a.pianeta}</span>`).join("");
   return `<button class="scheda" type="button" data-id="${p.id}">
-    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10211035" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
+    <div class="nastro">${p.foto.map((f,i)=>`<img src="${f}?v=10221519" alt="${esc(p.nome)}, foto ${i+1}" loading="lazy">`).join("")}</div>
     <div class="corpo"><h3>${esc(p.nome)}</h3>
       <div class="posizioni"><span class="chip">Sole <b>${p.sole}</b></span><span class="chip">Venere <b>${p.venere}</b></span>${luna}<span class="chip">Marte <b>${p.segni.Marte}</b></span></div>
       <div class="tocchi">${tocchi||"Venere senza aspetti certi"}</div>
@@ -211,7 +211,7 @@ function disegna(){
 function ruota(p){
   const t=TEMI[p.id];
   if(!t)return `<p class="tema-meta">Tema natale non disponibile.</p>`;
-  return `<img class="ruota" src="${esc(t.img)}?v=10211035" alt="Tema natale di ${esc(p.nome)}">`;
+  return `<img class="ruota" src="${esc(t.img)}?v=10221519" alt="Tema natale di ${esc(p.nome)}">`;
 }
 
 function apri(id){
@@ -222,7 +222,7 @@ function apri(id){
   $("#dett-corpo").innerHTML=`<div class="dett">${ruota(p)}<div class="tema-info">
     <h2>${esc(p.nome)}</h2><p class="tema-meta">${ora}</p>
     <div class="pianeti-griglia">${posizioni}</div></div></div>
-    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10211035" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
+    <div style="padding:0 22px 22px"><div class="galleria">${p.foto.map((f,i)=>`<img src="${f}?v=10221519" alt="${esc(p.nome)}, foto ${i+1}">`).join("")}</div></div>`;
   const d=$("#dettaglio");if(typeof d.showModal==="function")d.showModal();else d.setAttribute("open","");
 }
 
@@ -254,7 +254,7 @@ document.addEventListener("click",e=>{  // rotella e tendine si chiudono toccand
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape")chiudiTendine()});
 
-Promise.all([fetch("dati.json?v=10211018").then(r=>r.json()),fetch("temi.json?v=10211018").then(r=>r.json())]).then(([dati,temi])=>{
+Promise.all([fetch("dati.json?v=10221519").then(r=>r.json()),fetch("temi.json?v=10221519").then(r=>r.json())]).then(([dati,temi])=>{
   D=dati;TEMI=temi||{};
   fetch("difficolta.json?v="+Date.now()).then(r=>r.ok?r.json():{}).then(d=>{DIFF=d||{};disegna()}).catch(()=>{});
   try{Object.assign(S,JSON.parse(localStorage.getItem("venere-filtri")||"{}"))}catch(e){}

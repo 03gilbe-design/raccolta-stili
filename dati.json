@@ -4421,5 +4421,50 @@
    "foto/joeperry_2.jpg",
    "foto/joeperry_3.jpg"
   ]
+ },
+ {
+  "nome": "Adam Sandler",
+  "id": "adamsandler",
+  "data": "09/09/1966",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Vergine",
+  "luna": "Cancro",
+  "luna_incerta": [
+   "Gemelli",
+   "Cancro"
+  ],
+  "pos": {
+   "Sole": 166.52,
+   "Luna": 95.96,
+   "Mercurio": 165.93,
+   "Venere": 150.84,
+   "Marte": 129.55,
+   "Giove": 117.03,
+   "Saturno": 357.03,
+   "Urano": 169.8,
+   "Nettuno": 229.82,
+   "Plutone": 168.19
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Cancro",
+   "Mercurio": "Vergine",
+   "Venere": "Vergine",
+   "Marte": "Leone",
+   "Giove": "Cancro",
+   "Saturno": "Pesci",
+   "Urano": "Vergine",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [],
+  "foto": [
+   "foto/adamsandler_0.jpg",
+   "foto/adamsandler_1.jpg",
+   "foto/adamsandler_2.jpg",
+   "foto/adamsandler_3.jpg",
+   "foto/adamsandler_4.jpg"
+  ]
  }
 ]

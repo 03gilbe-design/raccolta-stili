@@ -383,5 +383,10 @@
   "img": "temi/joeperry.png",
   "case": true,
   "pagina": "https://www.astro-seek.com/birth-chart/joe-perry-horoscope"
+ },
+ "adamsandler": {
+  "img": "temi/adamsandler.png",
+  "case": false,
+  "pagina": null
  }
 }
