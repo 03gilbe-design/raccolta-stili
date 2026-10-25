@@ -388,5 +388,55 @@
   "img": "temi/adamsandler.png",
   "case": false,
   "pagina": null
+ },
+ "mickjagger": {
+  "img": "temi/mickjagger.png",
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/mick-jagger-horoscope"
+ },
+ "michaeljackson": {
+  "img": "temi/michaeljackson.png",
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/michael-jackson-horoscope"
+ },
+ "florencewelch": {
+  "img": "temi/florencewelch.png",
+  "case": false,
+  "pagina": null
+ },
+ "liamgallagher": {
+  "img": "temi/liamgallagher.png",
+  "case": false,
+  "pagina": null
+ },
+ "nickcave": {
+  "img": "temi/nickcave.png",
+  "case": false,
+  "pagina": null
+ },
+ "dojacat": {
+  "img": "temi/dojacat.png",
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/doja-cat-horoscope"
+ },
+ "snoopdogg": {
+  "img": "temi/snoopdogg.png",
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/snoop-dogg-horoscope"
+ },
+ "ditavonteese": {
+  "img": "temi/ditavonteese.png",
+  "case": false,
+  "pagina": null
+ },
+ "avrillavigne": {
+  "img": "temi/avrillavigne.png",
+  "case": true,
+  "pagina": "https://www.astro-seek.com/birth-chart/avril-lavigne-horoscope"
+ },
+ "lilwayne": {
+  "img": "temi/lilwayne.png",
+  "case": false,
+  "pagina": null
  }
 }

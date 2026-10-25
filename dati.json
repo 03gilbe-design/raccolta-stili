@@ -4466,5 +4466,551 @@
    "foto/adamsandler_3.jpg",
    "foto/adamsandler_4.jpg"
   ]
+ },
+ {
+  "nome": "Mick Jagger",
+  "id": "mickjagger",
+  "data": "26/07/1943",
+  "ora": null,
+  "sole": "Leone",
+  "venere": "Vergine",
+  "luna": "Toro",
+  "luna_incerta": [
+   "Toro",
+   "Gemelli"
+  ],
+  "pos": {
+   "Sole": 122.58,
+   "Luna": 59.45,
+   "Mercurio": 131.77,
+   "Venere": 163.83,
+   "Marte": 42.49,
+   "Giove": 125.58,
+   "Saturno": 82.01,
+   "Urano": 67.81,
+   "Nettuno": 179.82,
+   "Plutone": 126.71
+  },
+  "segni": {
+   "Sole": "Leone",
+   "Luna": "Toro",
+   "Mercurio": "Leone",
+   "Venere": "Vergine",
+   "Marte": "Toro",
+   "Giove": "Leone",
+   "Saturno": "Gemelli",
+   "Urano": "Gemelli",
+   "Nettuno": "Vergine",
+   "Plutone": "Leone"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♂",
+    "forza": 0.83
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.21
+   }
+  ],
+  "foto": [
+   "foto/mickjagger_0.jpg",
+   "foto/mickjagger_1.jpg",
+   "foto/mickjagger_2.jpg",
+   "foto/mickjagger_3.jpg",
+   "foto/mickjagger_4.jpg"
+  ]
+ },
+ {
+  "nome": "Michael Jackson",
+  "id": "michaeljackson",
+  "data": "29/08/1958",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Leone",
+  "luna": "Pesci",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 155.88,
+   "Luna": 341.58,
+   "Mercurio": 145.54,
+   "Venere": 136.74,
+   "Marte": 51.91,
+   "Giove": 208.49,
+   "Saturno": 259.12,
+   "Urano": 133.49,
+   "Nettuno": 212.57,
+   "Plutone": 152.16
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Pesci",
+   "Mercurio": "Leone",
+   "Venere": "Leone",
+   "Marte": "Toro",
+   "Giove": "Bilancia",
+   "Saturno": "Sagittario",
+   "Urano": "Leone",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.03
+   },
+   {
+    "asp": "□",
+    "pianeta": "♂",
+    "forza": 0.3
+   },
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.63
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♅",
+    "forza": 0.62
+   }
+  ],
+  "foto": [
+   "foto/michaeljackson_0.jpg",
+   "foto/michaeljackson_1.jpg",
+   "foto/michaeljackson_2.jpg",
+   "foto/michaeljackson_3.jpg",
+   "foto/michaeljackson_4.jpg"
+  ]
+ },
+ {
+  "nome": "Florence Welch",
+  "id": "florencewelch",
+  "data": "28/08/1986",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Bilancia",
+  "luna": "Gemelli",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 154.85,
+   "Luna": 76.81,
+   "Mercurio": 146.67,
+   "Venere": 200.88,
+   "Marte": 283.18,
+   "Giove": 349.61,
+   "Saturno": 243.43,
+   "Urano": 258.36,
+   "Nettuno": 273.12,
+   "Plutone": 215.08
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Gemelli",
+   "Mercurio": "Leone",
+   "Venere": "Bilancia",
+   "Marte": "Capricorno",
+   "Giove": "Pesci",
+   "Saturno": "Sagittario",
+   "Urano": "Sagittario",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.5
+   }
+  ],
+  "foto": [
+   "foto/florencewelch_0.jpg",
+   "foto/florencewelch_1.jpg",
+   "foto/florencewelch_2.jpg",
+   "foto/florencewelch_3.jpg",
+   "foto/florencewelch_4.jpg"
+  ]
+ },
+ {
+  "nome": "Liam Gallagher",
+  "id": "liamgallagher",
+  "data": "21/09/1972",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Leone",
+  "luna": "Pesci",
+  "luna_incerta": [
+   "Acquario",
+   "Pesci"
+  ],
+  "pos": {
+   "Sole": 178.55,
+   "Luna": 335.7,
+   "Mercurio": 179.91,
+   "Venere": 134.41,
+   "Marte": 173.88,
+   "Giove": 269.62,
+   "Saturno": 80.48,
+   "Urano": 197.43,
+   "Nettuno": 242.88,
+   "Plutone": 181.77
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Pesci",
+   "Mercurio": "Vergine",
+   "Venere": "Leone",
+   "Marte": "Vergine",
+   "Giove": "Sagittario",
+   "Saturno": "Gemelli",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.41
+   }
+  ],
+  "foto": [
+   "foto/liamgallagher_0.jpg",
+   "foto/liamgallagher_1.jpg",
+   "foto/liamgallagher_2.jpg",
+   "foto/liamgallagher_3.jpg",
+   "foto/liamgallagher_4.jpg"
+  ]
+ },
+ {
+  "nome": "Nick Cave",
+  "id": "nickcave",
+  "data": "22/09/1957",
+  "ora": null,
+  "sole": "Vergine",
+  "venere": "Scorpione",
+  "luna": "Vergine",
+  "luna_incerta": [
+   "Leone",
+   "Vergine"
+  ],
+  "pos": {
+   "Sole": 178.8,
+   "Luna": 154.3,
+   "Mercurio": 161.85,
+   "Venere": 219.18,
+   "Marte": 178.64,
+   "Giove": 189.21,
+   "Saturno": 249.01,
+   "Urano": 130.29,
+   "Nettuno": 211.12,
+   "Plutone": 151.09
+  },
+  "segni": {
+   "Sole": "Vergine",
+   "Luna": "Vergine",
+   "Mercurio": "Vergine",
+   "Venere": "Scorpione",
+   "Marte": "Vergine",
+   "Giove": "Bilancia",
+   "Saturno": "Sagittario",
+   "Urano": "Leone",
+   "Nettuno": "Scorpione",
+   "Plutone": "Vergine"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "☿",
+    "forza": 0.49
+   },
+   {
+    "asp": "□",
+    "pianeta": "♅",
+    "forza": 0.79
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♆",
+    "forza": 0.14
+   }
+  ],
+  "foto": [
+   "foto/nickcave_0.jpg",
+   "foto/nickcave_1.jpg",
+   "foto/nickcave_2.jpg",
+   "foto/nickcave_3.jpg",
+   "foto/nickcave_4.jpg"
+  ]
+ },
+ {
+  "nome": "Doja Cat",
+  "id": "dojacat",
+  "data": "21/10/1995",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Vergine",
+  "luna_incerta": [
+   "Vergine",
+   "Bilancia"
+  ],
+  "pos": {
+   "Sole": 207.9,
+   "Luna": 177.05,
+   "Mercurio": 189.84,
+   "Venere": 224.27,
+   "Marte": 240.65,
+   "Giove": 254.03,
+   "Saturno": 348.81,
+   "Urano": 296.62,
+   "Nettuno": 292.85,
+   "Plutone": 239.25
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Vergine",
+   "Mercurio": "Bilancia",
+   "Venere": "Scorpione",
+   "Marte": "Sagittario",
+   "Giove": "Sagittario",
+   "Saturno": "Pesci",
+   "Urano": "Capricorno",
+   "Nettuno": "Capricorno",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "△",
+    "pianeta": "♄",
+    "forza": 0.35
+   }
+  ],
+  "foto": [
+   "foto/dojacat_0.jpg",
+   "foto/dojacat_1.jpg",
+   "foto/dojacat_2.jpg",
+   "foto/dojacat_3.jpg"
+  ]
+ },
+ {
+  "nome": "Snoop Dogg",
+  "id": "snoopdogg",
+  "data": "20/10/1971",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 206.73,
+   "Luna": 222.68,
+   "Mercurio": 214.91,
+   "Venere": 221.02,
+   "Marte": 321.91,
+   "Giove": 246.54,
+   "Saturno": 65.64,
+   "Urano": 194.76,
+   "Nettuno": 241.51,
+   "Plutone": 180.56
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Scorpione",
+   "Mercurio": "Scorpione",
+   "Venere": "Scorpione",
+   "Marte": "Acquario",
+   "Giove": "Sagittario",
+   "Saturno": "Gemelli",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☽",
+    "forza": 0.3
+   },
+   {
+    "asp": "☌",
+    "pianeta": "☿",
+    "forza": 0.37
+   }
+  ],
+  "foto": [
+   "foto/snoopdogg_0.jpg",
+   "foto/snoopdogg_1.jpg",
+   "foto/snoopdogg_2.jpg",
+   "foto/snoopdogg_3.jpg",
+   "foto/snoopdogg_4.jpg"
+  ]
+ },
+ {
+  "nome": "Dita Von Teese",
+  "id": "ditavonteese",
+  "data": "28/09/1972",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Leone",
+  "luna": "Gemelli",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 185.65,
+   "Luna": 81.42,
+   "Mercurio": 192.59,
+   "Venere": 142.46,
+   "Marte": 178.54,
+   "Giove": 270.29,
+   "Saturno": 80.58,
+   "Urano": 197.87,
+   "Nettuno": 243.04,
+   "Plutone": 182.05
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Gemelli",
+   "Mercurio": "Bilancia",
+   "Venere": "Leone",
+   "Marte": "Vergine",
+   "Giove": "Capricorno",
+   "Saturno": "Gemelli",
+   "Urano": "Bilancia",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♄",
+    "forza": 0.59
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♅",
+    "forza": 0.15
+   }
+  ],
+  "foto": [
+   "foto/ditavonteese_0.jpg",
+   "foto/ditavonteese_1.jpg",
+   "foto/ditavonteese_2.jpg",
+   "foto/ditavonteese_3.jpg"
+  ]
+ },
+ {
+  "nome": "Avril Lavigne",
+  "id": "avrillavigne",
+  "data": "27/09/1984",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Scorpione",
+  "luna": "Scorpione",
+  "luna_incerta": null,
+  "pos": {
+   "Sole": 184.76,
+   "Luna": 221.08,
+   "Mercurio": 174.37,
+   "Venere": 212.5,
+   "Marte": 264.87,
+   "Giove": 274.4,
+   "Saturno": 224.01,
+   "Urano": 250.23,
+   "Nettuno": 268.74,
+   "Plutone": 210.99
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Scorpione",
+   "Mercurio": "Vergine",
+   "Venere": "Scorpione",
+   "Marte": "Sagittario",
+   "Giove": "Capricorno",
+   "Saturno": "Scorpione",
+   "Urano": "Sagittario",
+   "Nettuno": "Sagittario",
+   "Plutone": "Scorpione"
+  },
+  "asp_venere": [
+   {
+    "asp": "⚹",
+    "pianeta": "♃",
+    "forza": 0.59
+   },
+   {
+    "asp": "⚹",
+    "pianeta": "♆",
+    "forza": 0.27
+   },
+   {
+    "asp": "☌",
+    "pianeta": "♇",
+    "forza": 0.79
+   }
+  ],
+  "foto": [
+   "foto/avrillavigne_0.jpg",
+   "foto/avrillavigne_1.jpg",
+   "foto/avrillavigne_2.jpg",
+   "foto/avrillavigne_3.jpg",
+   "foto/avrillavigne_4.jpg"
+  ]
+ },
+ {
+  "nome": "Lil Wayne",
+  "id": "lilwayne",
+  "data": "27/09/1982",
+  "ora": null,
+  "sole": "Bilancia",
+  "venere": "Vergine",
+  "luna": "Acquario",
+  "luna_incerta": [
+   "Capricorno",
+   "Acquario"
+  ],
+  "pos": {
+   "Sole": 184.3,
+   "Luna": 302.31,
+   "Mercurio": 193.54,
+   "Venere": 174.63,
+   "Marte": 245.3,
+   "Giove": 220.93,
+   "Saturno": 202.63,
+   "Urano": 241.6,
+   "Nettuno": 264.4,
+   "Plutone": 205.96
+  },
+  "segni": {
+   "Sole": "Bilancia",
+   "Luna": "Acquario",
+   "Mercurio": "Bilancia",
+   "Venere": "Vergine",
+   "Marte": "Sagittario",
+   "Giove": "Scorpione",
+   "Saturno": "Bilancia",
+   "Urano": "Sagittario",
+   "Nettuno": "Sagittario",
+   "Plutone": "Bilancia"
+  },
+  "asp_venere": [
+   {
+    "asp": "☌",
+    "pianeta": "☉",
+    "forza": 0.02
+   },
+   {
+    "asp": "□",
+    "pianeta": "♆",
+    "forza": 0.9
+   }
+  ],
+  "foto": [
+   "foto/lilwayne_0.jpg",
+   "foto/lilwayne_1.jpg",
+   "foto/lilwayne_2.jpg"
+  ]
  }
 ]
